@@ -18,14 +18,14 @@ include 'inc/tfunction.php';
 				<div class="row">
 					<div class="col-md-6">
 						<div class="left">
-							<p><span>dashboard</span>Control panel</p>
+							<p><span>Bảng điều khiển</span></p>
 						</div>
 					</div>
 					<div class="col-md-6">
 						<div class="right text-right">
-							<a href="dashboard.php"><i class="fas fa-home"></i>home</a>
-							<a href="add-student.php"><i class="fas fa-user"></i>add student</a>
-							<span class="disabled">add teacher</span>
+							<a href="dashboard.php"><i class="fas fa-home"></i>Trang chủ</a>
+							<a href="add-student.php"><i class="fas fa-user"></i>Thêm sinh viên</a>
+							<span class="disabled">Thêm giáo viên</span>
 						</div>
 					</div>
 				</div>
@@ -36,15 +36,15 @@ include 'inc/tfunction.php';
                         <?php if(isset($error_m)):?>
                             <span class="errort"> <?php echo $error_m; ?></span>
                         <?php endif ?>
-                        <h4 style="text-align: center; margin-bottom: 25px;">Teacher registration form</h4>
+                        <h4 style="text-align: center; margin-bottom: 25px;">Đơn đăng ký giáo viên</h4>
                         <form action="" class="form-inline" method="post">
                             <div class="form-group">
-                                <label for="name" class="text-right">Name <span>*</span></label>
-                                <input type="text" class="form-control custom" placeholder="Full Name" name="name"/>
+                                <label for="name" class="text-right">Tên <span>*</span></label>
+                                <input type="text" class="form-control custom" placeholder="Họ và tên" name="name"/>
                             </div>
                             <div class="form-group">
-                                <label for="username">Username <span>*</span></label>
-                                <input type="text" class="form-control custom" placeholder="Username" name="username"/>
+                                <label for="username">Tài khoản <span>*</span></label>
+                                <input type="text" class="form-control custom" placeholder="Tài khoản" name="username"/>
                             </div>
                             <?php if(isset($error_ua)):?>
                                 <span class="error"> <?php echo $error_ua; ?></span>
@@ -53,12 +53,12 @@ include 'inc/tfunction.php';
                                 <span class="error"> <?php echo $error_uname; ?></span>
                             <?php endif ?>
                             <div class="form-group">
-                                <label for="password">Password <span>*</span></label>
-                                <input type="password" class="form-control custom" placeholder="Password" name="password"/>
+                                <label for="password">Mật khẩu <span>*</span></label>
+                                <input type="password" class="form-control custom" placeholder="Mật khẩu" name="password"/>
                             </div>
                             <div class="form-group">
-                                <label for="lecturer">Lecturer <span>*</span></label>
-                                <input type="text" class="form-control custom" placeholder="lecturer / dept" name="lecturer"/>
+                                <label for="lecturer">Giảng viên <span>*</span></label>
+                                <input type="text" class="form-control custom" placeholder="Giảng viên" name="lecturer"/>
                             </div>
                             <div class="form-group">
                                 <label for="email">Email <span>*</span></label>
@@ -71,25 +71,25 @@ include 'inc/tfunction.php';
                                 <span class="error"><?php echo $error_email; ?> </span>
                             <?php endif ?>
                             <div class="form-group">
-                                <label for="phone">Phone No <span>*</span></label>
-                                <input type="text" class="form-control custom" placeholder="Phone No" name="phone"/>
+                                <label for="phone">Số điện thoại<span>*</span></label>
+                                <input type="text" class="form-control custom" placeholder="Số điện thoại" name="phone"/>
                             </div>
                             <?php if(isset($error_phone)):?>
                                 <span class="error"><?php echo $error_phone; ?></span>
                             <?php endif ?>
                             <div class="form-group">
-                                <label for="session">Id No <span>*</span></label>
-                                <input type="text" class="form-control custom" placeholder="Id No" name="idno"/>
+                                <label for="session">Số ID<span>*</span></label>
+                                <input type="text" class="form-control custom" placeholder="Số ID" name="idno"/>
                             </div>
                             <?php if(isset($error_id)):?>
                                 <span class="error"><?php echo $error_id; ?></span>
                             <?php endif ?>
                             <div class="form-group">
-                                <label for="address">Address <span>*</span></label>
-                                <textarea name="address" id="address"  class="form-control custom" placeholder="Your address"></textarea>
+                                <label for="address">Địa chỉ <span>*</span></label>
+                                <textarea name="address" id="address"  class="form-control custom" placeholder="Địa chỉ"></textarea>
                             </div>
                             <div class="submit">
-                                <input type="submit" value="Register" class="btn change" name="submit">
+                                <input type="submit" value="Đăng kí" class="btn change" name="submit">
                             </div>
                         </form>
 					</div>

@@ -19,13 +19,13 @@
 				<div class="row">
 					<div class="col-md-6">
 						<div class="left">
-							<p><span>dashboard</span>Control panel</p>
+							<p><span>Bảng điều khiển</span></p>
 						</div>
 					</div>
 					<div class="col-md-6">
 						<div class="right text-right">
-							<a href="dashboard.php"><i class="fas fa-home"></i>home</a>
-							<span class="disabled">all student info</span>
+							<a href="dashboard.php"><i class="fas fa-home"></i>Trang chủ</a>
+							<span class="disabled">Tất cả sinh viên</span>
 						</div>
 					</div>
 				</div>
@@ -39,15 +39,15 @@
                             <table id="dtBasicExample" class="table table-dark table-striped text-center">
                                 <thead>
                                     <tr>
-                                        <th>Reg no</th>
-                                        <th>Name</th>
-                                        <th>Username</th>
-                                        <th>Semester</th>
-                                        <th>Dept</th>
-                                        <th>Session</th>
+                                        <th>Mã sinh viên</th>
+                                        <th>Tên</th>
+                                        <th>Tài khoản</th>
+                                        <th>Học kì</th>
+                                        <th>Khóa</th>
+                                        <th>Phiên họp</th>
                                         <th>Email</th>
-                                        <th>Phone</th>
-                                        <th>Address</th>
+                                        <th>Số điện thoại</th>
+                                        <th>Dịa chỉ</th>
                                     </tr>
                                 </thead>
                                 <tbody>

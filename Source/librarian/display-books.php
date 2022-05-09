@@ -17,13 +17,13 @@
 				<div class="row">
 					<div class="col-md-6">
 						<div class="left">
-							<p><span>dashboard</span>Control panel</p>
+							<p><span>Bảng điều khiển</span></p>
 						</div>
 					</div>
 					<div class="col-md-6">
 						<div class="right text-right">
-							<a href="dashboard.php"><i class="fas fa-home"></i>home</a>
-							<span class="disabled">display books</span>
+							<a href="dashboard.php"><i class="fas fa-home"></i>Trang chủ</a>
+							<span class="disabled">Quản lý sách</span>
 						</div>
 					</div>
 				</div>				
@@ -35,15 +35,15 @@
                             <table id="dtBasicExample" class="table table-striped table-dark text-center">
                            <thead>
                                 <tr>
-                                    <th>Books image</th>
-                                    <th>Books name</th>
-                                    <th>Author name</th>
-                                    <th>Publication name</th>
-                                    <th>Purchase date</th>
-                                    <th>Books price</th>
-                                    <th>Books quantity</th>
-                                    <th>Books availability</th>
-                                    <th>Delete book</th>
+                                    <th>Ảnh</th>
+                                    <th>Tên</th>
+                                    <th>Tác giả</th>
+                                    <th>Nhà xuất bản</th>
+                                    <th>Ngày mua</th>
+                                    <th>Giá</th>
+                                    <th>Số lượng</th>
+                                    <th>Sách có sẵn</th>
+                                    <th>Xóa sách</th>
                                 </tr>
                            </thead>
                             

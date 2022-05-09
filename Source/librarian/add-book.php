@@ -18,13 +18,13 @@
 				<div class="row">
 					<div class="col-md-6">
 						<div class="left">
-							<p><span>dashboard</span>Control panel</p>
+							<p><span>bảng điều khiển</span></p>
 						</div>
 					</div>
 					<div class="col-md-6">
 						<div class="right text-right">
-							<a href="dashboard.php"><i class="fas fa-home"></i>home</a>
-							<span class="disabled">add book</span>
+							<a href="dashboard.php"><i class="fas fa-home"></i>Trang chủ</a>
+							<span class="disabled">Thêm sách</span>
 						</div>
 					</div>
 				</div>
@@ -33,54 +33,54 @@
                         <table class="table table-bordered">
                             <tr>
                                 <td>
-                                   <input type="text" class="form-control" name="booksname" placeholder="Books name" required=""> 
+                                   <input type="text" class="form-control" name="booksname" placeholder="Tên sách" required=""> 
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    Books image
+                                    Ảnh sách
                                     <input type="file" class="form-control" name="f1" required="">
                                 </td>
                             </tr>
                              <tr>
                                 <td>
-                                    Books file
+                                    Tệp sách
                                     <input type="file" class="form-control" name="file" required="">
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <input type="text" class="form-control" name="bauthorname" placeholder="Books author name" required="">
+                                    <input type="text" class="form-control" name="bauthorname" placeholder="Tác giả" required="">
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <input type="text" class="form-control" name="bpubname" placeholder="Books publication name" required="">
+                                    <input type="text" class="form-control" name="bpubname" placeholder="Tên xuất bản sách" required="">
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <input type="text" class="form-control" name="bpurcdate" placeholder="Books purchase date" required="">
+                                    <input type="text" class="form-control" name="bpurcdate" placeholder="Ngày mua sách" required="">
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <input type="text" class="form-control" name="bprice" placeholder="Books price" required="">
+                                    <input type="text" class="form-control" name="bprice" placeholder="Giá sách" required="">
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <input type="text" class="form-control" name="bquantity" placeholder="Books quantity" required="">
+                                    <input type="text" class="form-control" name="bquantity" placeholder="Số lượng sách" required="">
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <input type="text" class="form-control" name="bavailability" placeholder="Books availability" required="">
+                                    <input type="text" class="form-control" name="bavailability" placeholder="Sách có sẵn" required="">
                                 </td>
                             </tr>
                         </table>
                         <div class="submit mt-20">
-                        	<input type="submit" name="submit" class="btn btn-info submit" value="Add Book">
+                        	<input type="submit" name="submit" class="btn btn-info submit" value="Thêm sách">
                         </div>
                 	</form>
 				</div>				
