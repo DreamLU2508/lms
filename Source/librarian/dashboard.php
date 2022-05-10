@@ -45,7 +45,7 @@
                                          echo $result;
                                     ?>
                                     </span></h3>
-								<h4><a href="#">Thành viên</a></h4>
+								<h4><a href="members.php">Thành viên</a></h4>
 							</div>
 						</div>
 					</div>

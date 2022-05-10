@@ -19,13 +19,13 @@
 				<div class="row">
 					<div class="col-md-6">
 						<div class="left">
-							<p><span>dashboard</span>Control panel</p>
+							<p><span>Bảng điều khiển</span></p>
 						</div>
 					</div>
 					<div class="col-md-6">
 						<div class="right text-right">
-							<a href="dashboard.php"><i class="fas fa-home"></i>home</a>
-							<span class="disabled">requested books</span>
+							<a href="dashboard.php"><i class="fas fa-home"></i>Trang chủ</a>
+							<span class="disabled">Sách yêu cầu</span>
 						</div>
 					</div>
 				</div>
@@ -36,12 +36,12 @@
 								<table id="dtBasicExample" class="table  table-striped table-dark text-center">
 									<thead>
 										<tr>
-											<th>Name</th>
-											<th>Username</th>
-											<th>User Type</th>								
+											<th>Tên</th>
+											<th>Tài khoản</th>
+											<th>Loại tài khoản</th>								
 											<th>Email</th>
-											<th>Book Name</th>
-											<th>Book Url</th>										
+											<th>Tên sách</th>
+											<th>Liên kết</th>										
 										</tr>
 									</thead>
 									<tbody>

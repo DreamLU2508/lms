@@ -17,13 +17,13 @@
 				<div class="row">
 					<div class="col-md-6">
 						<div class="left">
-							<p><span>dashboard</span>Control panel</p>
+							<p><span>Bảng điều khiển</span></p>
 						</div>
 					</div>
 					<div class="col-md-6">
 						<div class="right text-right">
-							<a href="dashboard.php"><i class="fas fa-home"></i>home</a>
-							<span class="disabled">return book</span>
+							<a href="dashboard.php"><i class="fas fa-home"></i>Trang chủ</a>
+							<span class="disabled">Trả sách</span>
 						</div>
 					</div>
 				</div>
@@ -39,7 +39,7 @@
                                    </select>
                                </td>
                                <td>
-                                   <input type="submit" name="submit1" class="btn btn-info form-control" value="Search">
+                                   <input type="submit" name="submit1" class="btn btn-info form-control" value="Tìm kiếm">
                                </td>
                            </tr>
                        </table>
@@ -50,16 +50,16 @@
 								<table class="table  table-striped table-dark text-center">
 									<thead>
 										<tr>
-											<th>Reg No</th>
-											<th>Name</th>
-											<th>Username</th>
-											<th>Semester</th>
-											<th>Dept</th>
-											<th>Book Name</th>
-											<th>Issue Date</th>
+											<th>Mã sách</th>
+											<th>Tên</th>
+											<th>Tài khoản</th>
+											<th>Học kì</th>
+											<th>Khoa</th>
+											<th>Tên sách</th>
+											<th>Ngày mượn</th>
 											<th>Email</th>
-											<th>Phone</th>
-											<th>Return Book</th>
+											<th>Số điện thoại</th>
+											<th>Hành động</th>
 										</tr>
 									</thead>
 									<tbody>
@@ -73,7 +73,7 @@
 											<td>22/03/19</td>
 											<td>mamun@gmail.com</td>
 											<td>01721585268</td>
-											<td ><a href="return.php" class="link">Return book</a></td>
+											<td ><a href="return.php" class="link">Trả sách</a></td>
 										</tr>
 										<tr>
 											<td>14502000020</td>
@@ -85,7 +85,7 @@
 											<td>22/03/19</td>
 											<td>mamun@gmail.com</td>
 											<td>01721585268</td>
-											<td><a href="return.php" .std-info>Return book</a></td>
+											<td><a href="return.php" .std-info>Trả sách</a></td>
 										</tr>
 										<tr>
 											<td>14502000020</td>
@@ -97,7 +97,7 @@
 											<td>22/03/19</td>
 											<td>mamun@gmail.com</td>
 											<td>01721585268</td>
-											<td><a href="return.php" .std-info>Return book</a></td>
+											<td><a href="return.php" .std-info>Trả sách</a></td>
 										</tr>
 									</tbody>
 								</table>

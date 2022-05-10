@@ -18,13 +18,13 @@
 				<div class="row">
 					<div class="col-md-6">
 						<div class="left">
-							<p><span>dashboard</span>Control panel</p>
+							<p><span>Bảng điều khiển</span></p>
 						</div>
 					</div>
 					<div class="col-md-6">
 						<div class="right text-right">
-							<a href="dashboard.php"><i class="fas fa-home"></i>home</a>
-							<span class="disabled">profile</span>
+							<a href="dashboard.php"><i class="fas fa-home"></i>Trang chủ</a>
+							<span class="disabled">Hồ sơ</span>
 						</div>
 					</div>
 				</div>
@@ -44,7 +44,7 @@
 								<form action="" method="post" enctype="multipart/form-data">
 									<input type="file" name="image" class="modal-mt" id="image">
 									<div class="gap-30"></div>
-									<input type="submit" class="modal-mt btn btn-info" value="Upload Image" name="submit">
+									<input type="submit" class="modal-mt btn btn-info" value="Cập nhật ảnh" name="submit">
 								</form>
 							</div>
                             <?php 
@@ -78,11 +78,11 @@
                                    ?>
                                 <form method="post">
                                     <div class="form-group">
-                                        <label for="name" class="text-right">Name:</label>
+                                        <label for="name" class="text-right">Tên:</label>
                                         <input type="text" class="form-control custom"  name="name" value="<?php echo $name; ?>" />
                                     </div>
                                     <div class="form-group">
-                                         <label for="username">Username:</label>
+                                         <label for="username">Tài khoản:</label>
                                         <input type="text" class="form-control custom" placeholder="Username" name="username" value="<?php echo $username; ?>" disabled />
                                     </div>
                                     <div class="form-group">
@@ -90,15 +90,15 @@
                                         <input type="text" class="form-control custom"  name="email" value="<?php echo $email; ?>" disabled />
                                     </div>
                                     <div class="form-group">
-                                         <label for="phone">Phone No:</label>
+                                         <label for="phone">Số điện thoại:</label>
                                         <input type="text" class="form-control custom"  name="phone" value="<?php echo $phone; ?>" />
                                     </div> 
                                     <div class="form-group">
-                                        <label for="address">Address:</label>
+                                        <label for="address">Địa chỉ:</label>
                                          <input type="text" class="form-control custom"  name="address" value="<?php echo $address; ?>" />
                                     </div>
                                     <div class="text-right mt-20">
-                                        <input type="submit" value="Save" class="btn btn-info" name="update">
+                                        <input type="submit" value="Lưu" class="btn btn-info" name="update">
                                     </div>
                                 <?php
 

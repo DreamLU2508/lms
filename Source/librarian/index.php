@@ -60,7 +60,7 @@
                     if ($count==0) {
                         ?>
                         <div class="alert alert-warning">
-                            <strong style="color:#333">Invalid!</strong> <span style="color: red;font-weight: bold; ">Username Or Password.</span>
+                            <strong style="color:#333">Tài khoản hoặc mật khẩu</strong> <span style="color: red;font-weight: bold; ">Không hợp lệ</span>
                         </div>
                     <?php
                     }

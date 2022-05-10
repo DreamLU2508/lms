@@ -17,13 +17,13 @@
 				<div class="row">
 					<div class="col-md-6">
 						<div class="left">
-							<p><span>dashboard</span>Control panel</p>
+							<p><span>Bảng điều khiển</span></p>
 						</div>
 					</div>
 					<div class="col-md-6">
 						<div class="right text-right">
-							<a href="dashboard.php"><i class="fas fa-home"></i>home</a>
-							<span class="disabled">send Message to student</span>
+							<a href="dashboard.php"><i class="fas fa-home"></i>Trang chủ</a>
+							<span class="disabled">Gửi tin nhắn cho sinh viên</span>
 						</div>
 					</div>
 				</div>
@@ -64,17 +64,17 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <input type="text" class="form-control" placeholder="Enter title" name="title">
+                                    <input type="text" class="form-control" placeholder="Nhập tiêu đề" name="title">
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <textarea name="msg" class="form-control" placeholder="Message here...."></textarea>
+                                    <textarea name="msg" class="form-control" placeholder="Nội dung ở đây....."></textarea>
                                 </td>
                             </tr>
                             <tr>
                         </table>
-                        <input type="submit" name="submit" value="Send Message" class="btn btn-info">
+                        <input type="submit" name="submit" value="Gửi" class="btn btn-info">
                     </form>
 				</div>
 			</div>					
