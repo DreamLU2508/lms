@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Library Management System</title>
+	<title>Hệ thống quản lý thư viện</title>
 	<link rel="icon" type="image/png" href="dist/img/favicon.ico">
 	<link rel="stylesheet" href="dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="dist/css/fontawesome-all.min.css">
@@ -26,13 +26,13 @@
 							<li><a href=""><i class="fab fa-facebook-f"></i></a></li>
 							<li><a href=""><i class="fab fa-twitter"></i></a></li>
 							<li><a href=""><i class="fab fa-linkedin"></i></a></li>
-							<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Login</a>
+							<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Đăng nhập</a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="student/login.php">Student Login</a></li>
-                                    <li><a href="teacher/login.php">Teacher Login</a></li>
+                                    <li><a href="student/login.php">Đăng nhập sinh viên</a></li>
+                                    <li><a href="teacher/login.php">Đăng nhập giáo viên</a></li>
                                 </ul>
                             </li>
-							<li><a href="contactus.php">Contact Us</a></li>
+							<li><a href="contactus.php">Liên hệ chúng tôi</a></li>
 						</ul>		
 					</div>
 				</div>
@@ -46,14 +46,14 @@
 				<div class="overlay"></div>
 				<div class="text">
 					<div class="this-item">
-						<h2>welcome to our library</h2>
+						<h2>Chào mừng đến với thư viện của chúng tôi</h2>
 					</div>
 					<div class="this-item">
-						<h3>we stand behind your success</h3>
+						<h3>Chúng tôi đứng đằng sau thành công của bạn</h3>
 					</div>
 					<div class="this-item">
-                        <p><a href="student/registration.php">student registration</a></p>
-                        <p><a href="teacher/registration.php">teacher registration</a></p>
+                        <p><a href="student/registration.php">Đăng ký sinh viên</a></p>
+                        <p><a href="teacher/registration.php">Đăng ký giáo viên</a></p>
 					</div>
 				</div>
 			</div>
@@ -61,14 +61,14 @@
 				<div class="overlay"></div>
 				<div class="text">
 					<div class="this-item">
-						<h2>welcome to our library</h2>
+						<h2>Chào mừng đến với thư viện của chúng tôi</h2>
 					</div>
 					<div class="this-item">
-						<h3>we stand behind your success</h3>
+						<h3>Chúng tôi đứng đằng sau thành công của bạn</h3>
 					</div>
 					<div class="this-item">
-                        <p><a href="student/registration.php">student registration</a></p>
-                        <p><a href="teacher/registration.php">teacher registration</a></p>
+                        <p><a href="student/registration.php">Đăng ký sinh viên</a></p>
+                        <p><a href="teacher/registration.php">Đăng ký giáo viên</a></p>
 					</div>
 				</div>
 			</div>
@@ -76,14 +76,14 @@
 				<div class="overlay"></div>
 				<div class="text">
 					<div class="this-item">
-						<h2>welcome to our library</h2>
+						<h2>Chào mừng đến với thư viện của chúng tôi</h2>
 					</div>
 					<div class="this-item">
-						<h3>we stand behind your success</h3>
+						<h3>Chúng tôi đứng đằng sau thành công của bạn</h3>
 					</div>
 					<div class="this-item">
-						<p><a href="student/registration.php">student registration</a></p>
-						<p><a href="teacher/registration.php">teacher registration</a></p>
+						<p><a href="student/registration.php">Đăng ký sinh viên</a></p>
+						<p><a href="teacher/registration.php">Đăng ký giáo viên</a></p>
 					</div>
 				</div>
 			</div>
@@ -91,14 +91,14 @@
 				<div class="overlay"></div>
 				<div class="text">
 					<div class="this-item">
-						<h2>welcome to our library</h2>
+						<h2>Chào mừng đến với thư viện của chúng tôi</h2>
 					</div>
 					<div class="this-item">
-						<h3>We stand behind your success</h3>
+						<h3>Chúng tôi đứng đằng sau thành công của bạn</h3>
 					</div>
 					<div class="this-item">
-                        <p><a href="student/registration.php">student registration</a></p>
-                        <p><a href="teacher/registration.php">teacher registration</a></p>
+                        <p><a href="student/registration.php">Đăng ký sinh viên</a></p>
+                        <p><a href="teacher/registration.php">Đăng ký giáo viên</a></p>
 					</div>
 				</div>
 			</div>
@@ -106,14 +106,14 @@
 				<div class="overlay"></div>
 				<div class="text">
 					<div class="this-item">
-						<h2>welcome to our library</h2>
+						<h2>Chào mừng đến với thư viện của chúng tôi</h2>
 					</div>
 					<div class="this-item">
-						<h3>We stand behind your success</h3>
+						<h3>Chúng tôi đứng đằng sau thành công của bạn</h3>
 					</div>
 					<div class="this-item">
-                        <p><a href="student/registration.php">student registration</a></p>
-                        <p><a href="teacher/registration.php">teacher registration</a></p>
+                        <p><a href="student/registration.php">Đăng ký sinh viên</a></p>
+                        <p><a href="teacher/registration.php">Đăng ký giáo viên</a></p>
 					</div>
 				</div>
 			</div>
@@ -121,14 +121,14 @@
 				<div class="overlay"></div>
 				<div class="text">
 					<div class="this-item">
-						<h2>welcome to our library</h2>
+						<h2>Chào mừng đến với thư viện của chúng tôi</h2>
 					</div>
 					<div class="this-item">
-						<h3>We stand behind your success</h3>
+						<h3>Chúng tôi đứng đằng sau thành công của bạn</h3>
 					</div>
 					<div class="this-item">
-                        <p><a href="student/registration.php">student registration</a></p>
-                        <p><a href="teacher/registration.php">teacher registration</a></p>
+                        <p><a href="student/registration.php">Đăng ký sinh viên</a></p>
+                        <p><a href="teacher/registration.php">Đăng ký giáo viên</a></p>
 					</div>
 				</div>
 			</div>

@@ -3,7 +3,7 @@
 <head>
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-	<title>Library Management System</title>
+	<title>Hệ thống quản lý thư viện</title>
 	<link rel="icon" type="image/png" href="dist/img/mm.png">
 	<link rel="stylesheet" href="dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="dist/css/fontawesome-all.min.css">
@@ -29,7 +29,7 @@
 							<li><a href=""><i class="fab fa-facebook-f"></i></a></li>
 							<li><a href=""><i class="fab fa-twitter"></i></a></li>
 							<li><a href=""><i class="fab fa-linkedin"></i></a></li>
-							<li><a href="index.php">Home</a></li>
+							<li><a href="index.php">Trang chủ</a></li>
 						</ul>		
 					</div>
 				</div>
@@ -41,26 +41,26 @@
 			<div class="row">
 				<div class="col-md-6">
 					<div class="left">
-						<h3>Send Us a Message</h3>
+						<h3>Gửi tin nhắn cho chúng tôi</h3>
 						<form action="">
-							<input type="text" placeholder="Your Name">
-							<input type="email" placeholder="Your E-mail">
-							<input type="digit" placeholder="Phone Number">
-							<textarea placeholder="Your Message" id="" cols="60" rows="5"></textarea>
-							<input type="submit" value="SEND A MESSAGE">
+							<input type="text" placeholder="Tên của bạn">
+							<input type="email" placeholder="Email của bạn">
+							<input type="digit" placeholder="Số điện thoại">
+							<textarea placeholder="Nội dung" id="" cols="60" rows="5"></textarea>
+							<input type="submit" value="Gửi tin nhắn">
 						</form>
 					</div>
 				</div>
 				<div class="col-md-6">
 					<div class="right">
-						<h3>Contact Info</h3>
-						<p>Our Management Training Programmes can be tailored as in-house programmes to address specific issues within your own company.We figure that most people who end up managing other people never really set off to do that in the first place.</p>
+						<h3>Thông tin liên lạc</h3>
+						<p>Các Chương trình Đào tạo Quản lý của chúng tôi có thể được điều chỉnh như các chương trình nội bộ để giải quyết các vấn đề cụ thể trong công ty của riêng bạn.</p>
 
 						<div class="box">
-							<p><i class="fas fa-home"></i><span> R/A 14 #48 Sonadanga 2nd phase</span></p>
-							<p><i class="far fa-envelope"></i><span> utterpompously@gmail.com</span></p>
-							<p><i class="fas fa-phone"></i><span> (+1)23 254 4578</span></p>
-							<p>(+1)23 254 4545</p>
+							<p><i class="fas fa-home"></i><span> 175 Tây sơn</span></p>
+							<p><i class="far fa-envelope"></i><span> abc@gmail.com</span></p>
+							<p><i class="fas fa-phone"></i><span> 0123456789</span></p>
+							<p>0123456789</p>
 						</div>
 					</div>
 				</div>
@@ -68,7 +68,7 @@
 		</div>
 	</div>
 	<div class="map-responsive mapw">
-		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d459.6851149337604!2d89.543789542394!3d22.821690263603124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ff9aaf52672c3d%3A0x7457988431037161!2sSonadanga+R%2FA%2C+(2nd+Phase).%2C+Khulna!5e0!3m2!1sen!2sbd!4v1523867957528" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.6368513919665!2d105.82263251464539!3d21.007189243890885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac8109765ba5%3A0xb3be79f8f64a59f9!2zMTc1IFAuIFTDonkgU8ahbiwgVHJ1bmcgTGnhu4d0LCDEkOG7kW5nIMSQYSwgSMOgIE7hu5lpLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1652168775881!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 	</div>
     <div class="footer text-center">
         <p style="margin: 20px; font-weight: bold;"><span>copyright &copy; utter pompously all rights reserved</span></p>
