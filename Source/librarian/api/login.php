@@ -20,10 +20,10 @@
         public $verified;
     }
 
-//if (isset($_POST["login"])) {
+if (isset($_POST["login"])) {
     $array = array();
     $count = 0;
-    $res = mysqli_query($link, "select * from std_registration where username='pompously' && password= '123456' && status='yes' && verified='yes' ");
+    $res = mysqli_query($link, "select * from std_registration where username='$_POST[username]' && password= '$_POST[password]' && status='yes' && verified='yes' ");
     $count = mysqli_num_rows($res);
     $row = mysqli_fetch_assoc($res);
     if ($count != 0) {
@@ -50,5 +50,5 @@
     
     echo json_encode($array);
     mysqli_close($link);
-//}
+}
 ?>
