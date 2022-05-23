@@ -164,13 +164,13 @@ CREATE TABLE `message` (
 -- Dumping data for table `message`
 --
 
-INSERT INTO `message` (`id`, `susername`, `rusername`, `title`, `msg`, `read1`, `time`) VALUES
-(10, 'admin', 'mamun22', 'test', 'good afternoon\r\n', 'y', '2019-09-07 11:49:45am'),
-(11, 'admin', 'mamun22', 'testing message', 'Hi mamun ! Whats up?', 'y', '2019-09-07 03:53:07pm'),
-(12, 'admin', 'mamun22', 'last', 'dfsdf', 'y', '2019-09-07 03:56:15pm'),
-(13, 'admin', 'nahid22', 'test', 'Hi nahid!', 'y', '2019-09-10 06:35:04pm'),
-(14, 'admin', 'nahid22', 'check', 'is it ok', 'y', '2019-09-10 06:38:07pm'),
-(15, 'admin', 'mamun22', 'ttttt', 'mmnbvvv', 'y', '2019-09-14 10:51:44am');
+INSERT INTO `message` (`id`, `lib_id`, `user_id`, `title`, `msg`, `time`) VALUES
+(1, 1, 'mamun22', 'test', 'good afternoon\r\n', 'y', '2019-09-07 11:49:45am'),
+(2, 1, 'mamun22', 'testing message', 'Hi mamun ! Whats up?', 'y', '2019-09-07 03:53:07pm'),
+(3, 1, 'mamun22', 'last', 'dfsdf', 'y', '2019-09-07 03:56:15pm'),
+(4, 1, 'nahid22', 'test', 'Hi nahid!', 'y', '2019-09-10 06:35:04pm'),
+(5, 1, 'nahid22', 'check', 'is it ok', 'y', '2019-09-10 06:38:07pm'),
+(6, 1, 'mamun22', 'ttttt', 'mmnbvvv', 'y', '2019-09-14 10:51:44am');
 
 -- --------------------------------------------------------
 
