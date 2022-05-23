@@ -18,13 +18,13 @@
 				<div class="row">
 					<div class="col-md-6">
 						<div class="left">
-							<p><span>dashboard</span>Control panel</p>
+							<p><span>Bảng Điều Khiển</span></p>
 						</div>
 					</div>
 					<div class="col-md-6">
 						<div class="right text-right">
-							<a href="dashboard.php"><i class="fas fa-home"></i>home</a>
-							<span class="disabled">student issue book</span>
+							<a href="dashboard.php"><i class="fas fa-home"></i>Trang Chủ</a>
+							<span class="disabled">Sách phát hành sinh viên</span>
 						</div>
 					</div>
 				</div>
@@ -161,7 +161,7 @@
                                        if ($qty==0) {
                                           ?>
                                             <div class="alert alert-danger col-lg-6 col-lg-push-3">
-                                            <strong style="">This book is not available.</strong>
+                                            <strong style="">Cuốn sách này không có sẵn.</strong>
                                             </div>
                                           <?php  
                                        }

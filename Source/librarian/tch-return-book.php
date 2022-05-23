@@ -17,13 +17,13 @@
 				<div class="row">
 					<div class="col-md-6">
 						<div class="left">
-							<p><span>dashboard</span>Control panel</p>
+							<p><span>Bảng Điều Khiển</span></p>
 						</div>
 					</div>
 					<div class="col-md-6">
 						<div class="right text-right">
-							<a href="dashboard.php"><i class="fas fa-home"></i>home</a>
-							<span class="disabled">return book</span>
+							<a href="dashboard.php"><i class="fas fa-home"></i>Trang Chủ</a>
+							<span class="disabled">Trả Sách</span>
 						</div>
 					</div>
 				</div>
@@ -50,15 +50,15 @@
 								<table class="table  table-striped table-dark text-center">
 									<thead>
 										<tr>
-											<th>Id No</th>
-											<th>Name</th>
-											<th>Username</th>
-											<th>Dept</th>
-											<th>Book Name</th>
-											<th>Issue Date</th>
+											<th>Id </th>
+											<th>Họ Tên</th>
+											<th>Tên người dùng</th>
+											<th>Nợ</th>
+											<th>Tên Sách</th>
+											<th>Ngày phát hành</th>
 											<th>Email</th>
-											<th>Phone</th>
-											<th>Return Book</th>
+											<th>SDT</th>
+											<th>Trả sách</th>
 										</tr>
 									</thead>
 									<tbody>
@@ -71,29 +71,31 @@
 											<td>22/03/19</td>
 											<td>mamun@gmail.com</td>
 											<td>01721585268</td>
-											<td ><a href="return.php">Return book</a></td>
+											<td ><a href="return.php">Trả sách</a></td>
 										</tr>
 										<tr>
 											<td>1001</td>
-											<td>Mostafizur Rahman</td>
+											<td>
+												
+											</td>
 											<td>utter333</td>
 											<td>CSE</td>
 											<td>Computer Network & Secutity</td>
 											<td>22/03/19</td>
 											<td>mamun@gmail.com</td>
 											<td>01721585268</td>
-											<td><a href="return.php">Return book</a></td>
+											<td><a href="return.php">Trả sách</a></td>
 										</tr>
 										<tr>
 											<td>1001</td>
-											<td>Mostafizur Rahman</td>
+											<td>Nguyễn Linh</td>
 											<td>utter333</td>
 											<td>CSE</td>
 											<td>Designing for Safe Use</td>
 											<td>22/03/19</td>
 											<td>mamun@gmail.com</td>
 											<td>01721585268</td>
-											<td><a href="return.php">Return book</a></td>
+											<td><a href="return.php">Trả Sách</a></td>
 										</tr>
 									</tbody>
 								</table>

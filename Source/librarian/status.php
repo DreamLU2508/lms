@@ -17,13 +17,13 @@
 				<div class="row">
 					<div class="col-md-6">
 						<div class="left">
-							<p><span>dashboard</span>Control panel</p>
+							<p><span>Bảng Điều Khiển</span></p>
 						</div>
 					</div>
 					<div class="col-md-6">
 						<div class="right text-right">
-							<a href="dashboard.php"><i class="fas fa-home"></i>home</a>
-							<span class="disabled">user status</span>
+							<a href="dashboard.php"><i class="fas fa-home"></i>Trang Chủ</a>
+							<span class="disabled">Trạng thái người dùng</span>
 						</div>
 					</div>
 				</div>
@@ -34,12 +34,12 @@
                                  <table id="dtBasicExample" class="table table-striped table-dark text-center">
                                        <thead>
                                             <tr>
-                                                <th>Name</th>
-                                                <th>Username</th>
-                                                <th>User Type</th>
+                                                <th>Họ Tên</th>
+                                                <th>Tên người dùng</th>
+                                                <th>Kiểu người dùng</th>
                                                 <th>Email</th>
-                                                <th>Status</th>
-                                                <th>Action</th>
+                                                <th>Trạng thái</th>
+                                                <th>Hoạt động</th>
                                             </tr>
                                        </thead>
                                        <tbody>
