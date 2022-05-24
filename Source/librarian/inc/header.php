@@ -1,8 +1,5 @@
 <?php
     include 'inc/connection.php';
-    $not=0;
-    $res = mysqli_query($link,"select * from request_books where read1='no'");
-    $not= mysqli_num_rows($res);
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,7 +24,7 @@
 				<div class="profile">
 					<div class="profile-pic">
                         <?php
-                            $res = mysqli_query($link, "select * from lib_registration where username='".$_SESSION['username']."'");
+                            $res = mysqli_query($link, "select * from lib_registration where id='".$_SESSION['username']."'");
                             while ($row = mysqli_fetch_array($res)){
                                 ?><img src="<?php echo $row["photo"]; ?> " height="" width="" alt="something wrong" class="rounded-circle"></a> <?php
                             }
@@ -37,7 +34,7 @@
 						<span>Chào Mừng!</span>
 						<h2>
               <?php 
-                $res = mysqli_query($link, "select * from lib_registration where username='".$_SESSION['username']."'");
+                $res = mysqli_query($link, "select * from lib_registration where id='".$_SESSION['username']."'");
                 while ($row = mysqli_fetch_array($res)){
                   $name  =  $row["name"];
                   echo $name;
@@ -59,10 +56,7 @@
       						<a href="profile.php"><i class="fas fa-id-card"></i>Hồ sơ</a>
     					</li>
 	                    <li class="menu <?php if($page=='sinfo'){ echo 'active';} ?>">
-      						<a href="all-student-info.php"><i class="fas fa-desktop"></i>Tất cả thông tin sinh viên</a>
-    					</li>
-    					<li class="menu <?php if($page=='tinfo'){ echo 'active';} ?>">
-      						<a href="all-teacher-info.php"><i class="fas fa-desktop"></i>Tất cả thông tin giáo viên</a>
+      						<a href="all-users-info.php"><i class="fas fa-desktop"></i>Tất cả thông tin người dùng</a>
     					</li>
     					<li class="menu menu-toggle2">
       						<a href="#"><i class="fas fa-location-arrow"></i>Quản lý sách<span class="fa fa-chevron-down"></span></a>
@@ -72,18 +66,10 @@
       						</ul>
     					</li>
 	                   <li class="menu menu-toggle1">
-      						<a href="#"><i class="fas fa-list-alt"></i>Sách phát hành <span class="fa fa-chevron-down"></span></a>
-      						<ul class="menus1">
-      							<li><a href="student-issue-book.php">Sách phát hành cho sinh viên</a></li>
-      							<li><a href="teacher-issue-book.php">Sách phát hành cho giáo viên</a></li>
-      						</ul>
+      						<a href="users-issue-book.php"><i class="fas fa-list-alt"></i>Thông tin mượn trả</a>
     					</li>
     					<li class="menu menu-toggle3">
-      						<a href="#"><i class="fas fa-users"></i>Quản lý người dùng <span class="fa fa-chevron-down"></span></a>
-      						<ul class="menus3">
-      							<li><a href="add-student.php">Thêm sinh viên</a></li>
-      							<li><a href="add-teacher.php">Thêm giáo viên</a></li>
-      						</ul>
+      						<a href="add-user.php"><i class="fas fa-users"></i>Thêm người dùng</a>
     					</li>
     					 <li class="menu <?php if($page=='ibook'){ echo 'active';} ?>">
       						<a href="issued-books.php"><i class="fas fa-bookmark"></i>Sách đã mượn</a>
@@ -92,11 +78,7 @@
       						<a href="requested-books.php"><i class="fas fa-book"></i>Xem sách được yêu cầu</a>
     					</li>
     					<li class="menu menu-toggle4">
-      						<a href="#"><i class="far fa-share-square"></i>Gửi tin nhắn cho người dùng <span class="fa fa-chevron-down"></span></a>
-      						<ul class="menus4">
-      							<li><a href="send-to-student.php">gửi tin nhắn cho sinh viên</a></li>
-      							<li><a href="send-to-teacher.php">gửi tin nhắn cho giáo viên</a></li>
-      						</ul>
+      						<a href="#"><i class="far fa-share-square"></i>Gửi tin nhắn cho người dùng</a>
     					</li>
     				</ul>
 				</div>
@@ -109,25 +91,25 @@
 					<div class="header-profile text-right">
 						<ul>
                             <li class="icon">
-                                <a href="requested-books.php" ><i class="fas fa-bell"></i></a>
-                                <span class="count" onclick="window.location='requested-books.php'"><b><?php echo $not; ?></b></span>
+                                <a href="" ><i class="fas fa-bell"></i></a>
                             </li>
 							<li class="dropdown">
                                 <?php
-                                     $res = mysqli_query($link, "select * from lib_registration where username='".$_SESSION['username']."'");
+                                     $res = mysqli_query($link, "select * from lib_registration where id='".$_SESSION['username']."'");
                                      while ($row = mysqli_fetch_array($res)){
-                                         ?><a href="" class="dropdown-toggle" data-toggle="dropdown"><img src="<?php echo $row["photo"]; ?>" alt=""><span><?php echo $_SESSION["username"]; ?></span></a> <?php
+                                         ?><a href="" class="dropdown-toggle" data-toggle="dropdown"><img src="<?php echo $row["photo"]; ?>" alt=""><span><?php echo $row["username"]; ?></span></a> <?php
                                      }
                                 ?>
 								<ul class="dropdown-menu">
 									<li class="user-header text-center">
 										<?php
-                                        $res = mysqli_query($link, "select * from lib_registration where username='".$_SESSION['username']."'");
-                                        while ($row = mysqli_fetch_array($res)){
+                                        $res = mysqli_query($link, "select * from lib_registration where id='".$_SESSION['username']."'");
+										$row = mysqli_fetch_assoc($res);
                                             ?><img src="<?php echo $row["photo"]; ?>" alt=""> <?php
-                                        }
+										
                                         ?>
-										<p><?php echo $_SESSION["username"]; ?> - Librarian</p>
+										
+										<p><?php echo $row["username"]; ?> - Librarian</p>
 									</li>
 									<li class="user-footer">
 										<ul>

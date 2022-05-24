@@ -56,8 +56,8 @@
                     if (isset($_POST["login"])) {
                         $count=0;
                         $res= mysqli_query($link, "select * from lib_registration where username='$_POST[username]' && password= '$_POST[password]' ");
-                        $count = mysqli_num_rows($res);
-                        if ($count==0) {
+                        $row = mysqli_fetch_assoc($res);
+                        if (!$row) {
                             ?>
                                 <div class="alert alert-warning">
                                 <strong style="color:#333">Tài khoản hoặc mật khẩu</strong> <span style="color: red;font-weight: bold; ">Không hợp lệ</span>
@@ -65,10 +65,11 @@
                             <?php
                         }
                         else{
-                            $_SESSION["username"] = $_POST["username"];
+                            $id = $row['id'];
+                            $_SESSION["username"] = $id;
                             ?>
                             <script type="text/javascript">
-                                window.location="dashboard.php";
+                                //window.location="dashboard.php";
                             </script>
                             <?php  
                         }

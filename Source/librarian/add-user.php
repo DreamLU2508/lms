@@ -24,8 +24,7 @@ include 'inc/function.php';
 					<div class="col-md-6">
 						<div class="right text-right">
 							<a href="dashboard.php"><i class="fas fa-home"></i>Trang chủ</a>
-                            <a href="add-teacher.php"><i class="fas fa-user"></i>Thêm giáo viên</a>
-							<span class="disabled">Thêm sinh viên</span>
+							<span class="disabled">Thêm người dùng</span>
 						</div>
 					</div>
 				</div>
@@ -38,7 +37,7 @@ include 'inc/function.php';
                         <?php if(isset($error_m)):?>
                             <span class="error"> <?php echo $error_m; ?></span>
                         <?php endif ?>
-                        <h4 style="text-align: center; margin-bottom: 25px;">Mẫu đăng ký sinh viên</h4>
+                        <h4 style="text-align: center; margin-bottom: 25px;">Mẫu đăng ký</h4>
                         <form action="" class="form-inline" method="post">
                             <div class="form-group">
                                 <label for="name" class="text-right">Tên <span>*</span></label>
@@ -76,42 +75,15 @@ include 'inc/function.php';
                                 <span class="error"><?php echo $error_phone; ?></span>
                             <?php endif ?>
                             <div class="form-group">
-                                <label for="sem">Chọn học kỳ <span>*</span></label>
-                                <select class="form-control custom" name="sem">
-                                    <option>Học kì 1</option>
-                                    <option>Học kì 2</option>
-                                    <option>Học kì 3</option>
-                                    <option>Học kì 4</option>
-                                    <option>Học kì 5</option>
-                                    <option>Học kì 6</option>
-                                    <option>Học kì 7</option>
-                                    <option>Học kì 8</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="dept">Khóa<span>*</span></label>
-                                <select class="form-control custom" name="dept">
-                                    <option>60</option>
-                                    <option>61</option>
-                                    <option>62</option>
-                                    <option>63</option>
-                                    <option>Khác</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="session">Phiên họp <span>*</span></label>
-                                <input type="text" class="form-control custom" placeholder="14/15" name="session"/>
-                            </div>
-                            <div class="form-group">
-                                <label for="regno">Số đăng kí <span>*</span></label>
-                                <input type="text" class="form-control custom" placeholder="Số đăng kí" name="regno"/>
-                            </div>
-                            <?php if(isset($error_reg)):?>
-                                <span class="error"><?php echo $error_reg; ?></span>
-                            <?php endif ?>
-                            <div class="form-group">
                                 <label for="address">Địa chỉ <span>*</span></label>
                                 <textarea name="address" id="address"  class="form-control custom" placeholder="Địa chỉ của bạn"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="utype">Loại <span>*</span></label>
+                                <select name="utype" id="utype"  class="form-control custom">
+                                    <option>student</option>
+                                    <option>teacher</option>
+                                </select>
                             </div>
                             <div class="submit">
                                 <input type="submit" value="Thêm sinh viên" name="submit" class="btn change text-center">

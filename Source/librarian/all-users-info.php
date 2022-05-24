@@ -39,31 +39,29 @@
                             <table id="dtBasicExample" class="table table-dark table-striped text-center">
                                 <thead>
                                     <tr>
-                                        <th>Mã sinh viên</th>
+                                        <th>Mã</th>
                                         <th>Tên</th>
                                         <th>Tài khoản</th>
-                                        <th>Học kì</th>
-                                        <th>Khóa</th>
-                                        <th>Phiên họp</th>
                                         <th>Email</th>
                                         <th>Số điện thoại</th>
                                         <th>Dịa chỉ</th>
+                                        <th>Loại</th>
+                                        <th>Trạng thái</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                    <?php
-                                        $res= mysqli_query($link, "select * from std_registration");
+                                        $res= mysqli_query($link, "select * from users");
                                         while ($row=mysqli_fetch_array($res)) {
                                             echo "<tr>";
-                                            echo "<td>"; echo $row["regno"]; echo "</td>";
+                                            echo "<td>"; echo $row["id"]; echo "</td>";
                                             echo "<td>"; echo $row["name"]; echo "</td>";
                                             echo "<td>"; echo $row["username"]; echo "</td>";
-                                            echo "<td>"; echo $row["sem"]; echo "</td>";
-                                            echo "<td>"; echo $row["dept"]; echo "</td>";
-                                            echo "<td>"; echo $row["session"]; echo "</td>";
                                             echo "<td>"; echo $row["email"]; echo "</td>";
                                             echo "<td>"; echo $row["phone"]; echo "</td>";
                                             echo "<td>"; echo $row["address"]; echo "</td>";
+                                            echo "<td>"; echo $row["utype"]; echo "</td>";
+                                            echo "<td>"; echo $row["status"]; echo "</td>";
                                             echo "</tr>";
                                         }
                                    ?> 

@@ -42,51 +42,31 @@
                                                 <th>Tên</th>
                                                 <th>Tài khoản</th>
                                                 <th>Email</th>
-                                                <th>Hành động</th>
+                                                <th>Ngày hết hạn</th>
                                             </tr>
                                        </thead>
                                         <tbody>
                                             <?php 
-                                                $res= mysqli_query($link, "select * from issue_book");
-                                                $res2= mysqli_query($link, "select * from t_issuebook");
+                                                $res= mysqli_query($link, "SELECT  name, username, email,utype, issue_book.booksissuedate, return_book.returndate, return_book.expirationdate, book.books_name FROM issue_book, return_book, book, users WHERE issue_book.user_id = return_book.user_id AND issue_book.book_id = return_book.book_id AND issue_book.book_id = book.id AND issue_book.user_id = users.id ");
                                                  while ($row=mysqli_fetch_array($res)) {
+                                                    if($row["returndate"] == ""){
+                                                        $returndate = "chưa trả";
+                                                    }
+                                                    else{
+                                                        $returndate = $row["returndate"];
+                                                    }
                                                     echo "<tr>";
-                                                    echo "<td>"; echo $row["booksname"]; echo "</td>";
+                                                    echo "<td>"; echo $row["books_name"]; echo "</td>";
                                                     echo "<td>"; echo $row["booksissuedate"]; echo "</td>";
-                                                    echo "<td>"; echo $row["booksreturndate"]; echo "</td>";
+                                                    echo "<td>"; echo $returndate; echo "</td>";
                                                     echo "<td>"; echo $row["utype"]; echo "</td>";
                                                     echo "<td>"; echo $row["name"]; echo "</td>";
                                                     echo "<td>"; echo $row["username"]; echo "</td>";
                                                     echo "<td>"; echo $row["email"]; echo "</td>";
+                                                    echo "<td>"; echo $row["expirationdate"]; echo "</td>";
                                                     echo "<td>";
-                                                   ?>
-                                                        <ul>
-                                                            <li><a style="color: #fff;" href="return.php?id=<?php echo $row["id"]; ?>"><i class="fas fa-undo-alt"></i></a></li>
-                                                            <li><a href="delete.php?id=<?php echo $row["id"]; ?>"><i class="fas fa-trash"></i></a></li>
-                                                        </ul> 
-                                                    <?php 
-                                                    echo "</td>";
-                                                    echo "</tr>";
                                                 }
-                                                while ($row=mysqli_fetch_array($res2)) {
-                                                    echo "<tr>";
-                                                    echo "<td>"; echo $row["booksname"]; echo "</td>";
-                                                    echo "<td>"; echo $row["booksissuedate"]; echo "</td>";
-                                                    echo "<td>"; echo $row["booksreturndate"]; echo "</td>";
-                                                    echo "<td>"; echo $row["utype"]; echo "</td>";
-                                                    echo "<td>"; echo $row["name"]; echo "</td>";
-                                                    echo "<td>"; echo $row["username"]; echo "</td>";
-                                                    echo "<td>"; echo $row["email"]; echo "</td>";
-                                                    echo "<td>";
-                                                   ?>
-                                                        <ul>
-                                                            <li><a href="return.php?id=<?php echo $row["id"]; ?>"><i class="fas fa-undo-alt"></i></a></li>
-                                                            <li><a href="delete.php?id=<?php echo $row["id"]; ?>"><i class="fas fa-trash"></i></a></li>
-                                                        </ul> 
-                                                    <?php 
-                                                    echo "</td>";
-                                                    echo "</tr>";
-                                                }
+                                                
                                              ?>
                                         </tbody>
                                   </table>

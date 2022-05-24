@@ -56,22 +56,24 @@
                 if (isset($_POST["login"])) {
                     $count=0;
                     $res= mysqli_query($link, "select * from lib_registration where username='$_POST[username]' && password= '$_POST[password]' ");
-                    $count = mysqli_num_rows($res);
-                    if ($count==0) {
-                        ?>
-                        <div class="alert alert-warning">
-                            <strong style="color:#333">Tài khoản hoặc mật khẩu</strong> <span style="color: red;font-weight: bold; ">Không hợp lệ</span>
-                        </div>
-                    <?php
-                    }
-                    else{
-                    $_SESSION["username"] = $_POST["username"];
-                    ?>
-                        <script type="text/javascript">
-                            window.location="dashboard.php";
-                        </script>
-                        <?php
-                    }
+                    $row = mysqli_fetch_assoc($res);
+                        echo $row['id'];
+                        if (!$row) {
+                            ?>
+                                <div class="alert alert-warning">
+                                <strong style="color:#333">Tài khoản hoặc mật khẩu</strong> <span style="color: red;font-weight: bold; ">Không hợp lệ</span>
+                                </div>
+                            <?php
+                        }
+                        else{
+                            $id = $row['id'];
+                            $_SESSION["username"] = $id;
+                            ?>
+                            <script type="text/javascript">
+                                window.location="dashboard.php";
+                            </script>
+                            <?php  
+                        }
                 }
                 ?>
             </div>

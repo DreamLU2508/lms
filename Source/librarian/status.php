@@ -36,7 +36,7 @@
                                             <tr>
                                                 <th>Họ Tên</th>
                                                 <th>Tên người dùng</th>
-                                                <th>Kiểu người dùng</th>
+                                                <th>Loại</th>
                                                 <th>Email</th>
                                                 <th>Trạng thái</th>
                                                 <th>Hoạt động</th>
@@ -44,8 +44,7 @@
                                        </thead>
                                        <tbody>
                                            <?php
-                                                $res= mysqli_query($link, "select * from std_registration ORDER BY id DESC");
-                                                $res2= mysqli_query($link, "select * from t_registration ORDER BY id DESC");
+                                                $res= mysqli_query($link, "select * from users ORDER BY id DESC");
                                                 while ($row=mysqli_fetch_array($res)) {
                                                     echo "<tr>";
                                                     echo "<td>"; echo $row["name"]; echo "</td>";
@@ -63,23 +62,7 @@
                                                     echo "</td>";
                                                     echo "</tr>";
                                                 }
-                                                while ($row=mysqli_fetch_array($res2)) {
-                                                    echo "<tr>";
-                                                    echo "<td>"; echo $row["name"]; echo "</td>";
-                                                    echo "<td>"; echo $row["username"]; echo "</td>";
-                                                    echo "<td>"; echo $row["utype"]; echo "</td>";
-                                                    echo "<td>"; echo $row["email"]; echo "</td>";
-                                                    echo "<td>"; echo $row["status"]; echo "</td>";
-                                                    echo "<td>";
-                                                    ?>
-                                                        <ul>
-                                                            <li><a href="approve.php?id=<?php echo $row["id"]; ?>"><i class="fas fa-location-arrow"></i></a></li>
-                                                            <li><a href="notapprove.php?id=<?php echo $row["id"]; ?>"><i class="fas fa-allergies"></i></a></li>
-                                                        </ul>
-                                                    <?php
-                                                    echo "</td>";
-                                                    echo "</tr>";
-                                                }
+                                                
                                              ?>
                                        </tbody>
                                  </table>

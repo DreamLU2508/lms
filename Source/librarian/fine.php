@@ -44,18 +44,20 @@
                                        </thead>
                                        <tbody>
                                            <?php
-                                                $res= mysqli_query($link, "select * from finezone");
+                                                $res= mysqli_query($link, "SELECT users.id, name, username, password, email, phone, address, utype, photo, status, issue_book.book_id, issue_book.booksissuedate, return_book.returndate, return_book.expirationdate, return_book.cost, book.books_name, book.books_image, book.books_author_name, book.books_publication_name, book.books_purchase_date, book.books_price, book.books_quantity, book.books_availability, book.librarian_id, book.books_file FROM issue_book, return_book, book, users WHERE issue_book.user_id = return_book.user_id AND issue_book.book_id = return_book.book_id AND issue_book.book_id = book.id AND issue_book.user_id = users.id ");
                                                 while ($row=mysqli_fetch_array($res)) {
-                                                    echo "<tr>";
-                                                    echo "<td>"; echo $row["username"]; echo "</td>";
-                                                    echo "<td>"; echo $row["utype"]; echo "</td>";
-                                                    echo "<td>"; echo $row["email"]; echo "</td>";
-                                                    echo "<td>"; echo $row["booksname"]; echo "</td>";
-                                                    echo "<td>"; echo $row["fine"]; echo "</td>";
-													echo "<td>";
-													?><a href="delete-fine.php?id=<?php echo $row["id"]; ?> " style="color: red"><i class="fas fa-trash"></i></a><?php
-													echo "</td>";
-                                                    echo "</tr>";
+                                                    if($row['cost'] != 0){
+                                                        echo "<tr>";
+                                                        echo "<td>"; echo $row["username"]; echo "</td>";
+                                                        echo "<td>"; echo $row["utype"]; echo "</td>";
+                                                        echo "<td>"; echo $row["email"]; echo "</td>";
+                                                        echo "<td>"; echo $row["books_name"]; echo "</td>";
+                                                        echo "<td>"; echo $row["cost"]; echo "</td>";
+													    echo "<td>";
+													    ?><a href="#" style="color: red"><i class="fas fa-trash"></i></a><?php
+													    echo "</td>";
+                                                        echo "</tr>";
+                                                    }
                                                 }
                                              ?>
                                        </tbody>

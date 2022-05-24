@@ -37,12 +37,9 @@
 							<div class="text">
 								<h3><span class="counter">
                                     <?php
-                                         $res = mysqli_query($link, "select * from std_registration");
-                                         $res2 = mysqli_query($link, "select * from t_registration");
-                                         $count2 = mysqli_num_rows($res2);
+                                         $res = mysqli_query($link, "select * from users");
                                          $count = mysqli_num_rows($res);
-                                         $result = $count + $count2;
-                                         echo $result;
+                                         echo $count;
                                     ?>
                                     </span></h3>
 								<h4><a href="members.php">Thành viên</a></h4>
@@ -58,11 +55,8 @@
 								<h3><span class="counter">
                                     <?php
                                          $res = mysqli_query($link, "select * from issue_book");
-                                         $res2 = mysqli_query($link, "select * from t_issuebook");
-                                         $count2 = mysqli_num_rows($res2);
                                          $count = mysqli_num_rows($res);
-                                         $result = $count + $count2;
-                                        echo $result;
+                                        echo $count;
                                     ?>
                                     </span></h3>
 								<h4><a href="issued-books.php">Sách đã mượn</a></h4>
@@ -77,7 +71,7 @@
 							<div class="text">
 								<h3><span class="counter">
                                     <?php
-                                         $res = mysqli_query($link, "select * from add_book");
+                                         $res = mysqli_query($link, "select * from book");
                                          $count = mysqli_num_rows($res);
                                         echo $count;
                                     ?>
@@ -94,9 +88,12 @@
 							<div class="text">
 								<h3><span class="counter">
                                      <?php
-                                         $res = mysqli_query($link, "select fine from finezone");
-                                         $count = mysqli_num_rows($res);
-                                        echo $count * 50;
+                                         $res = mysqli_query($link, "select cost from return_book");
+                                         $sum = 0;
+										 while($row = mysqli_fetch_assoc($res)){
+											 $sum = $sum + $row['cost'];
+										 }
+                                        echo $sum;
                                     ?>
                                     </span></h3>
 								<h4><a href="fine.php">Doanh thu</a></h4>
@@ -119,7 +116,7 @@
 								<i class="fas fa-user"></i>
 							</div>
 							<div class="text">
-								<h4 class="mt-20"><a href="add-student.php">Quản lý người dùng</a></h4>
+								<h4 class="mt-20"><a href="add-user.php">Quản lý người dùng</a></h4>
 							</div>
 						</div>
 					</div>
