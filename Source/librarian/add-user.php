@@ -86,7 +86,7 @@ include 'inc/function.php';
                                 </select>
                             </div>
                             <div class="submit">
-                                <input type="submit" value="Thêm sinh viên" name="submit" class="btn change text-center">
+                                <input type="submit" value="Thêm người dùng" name="submit" class="btn change text-center">
                             </div>
                         </form>
 
