@@ -14,12 +14,13 @@
         public $books_file;
     }
 
-    if(isset($_POST['bookid'])){
+    if(isset($_POST['book_id'])){
         $array = array();
-        $sql = "select * from book where id = '".$_POST[bookid]."'";
+        $sql = "select * from book where id = '".$_POST['book_id']."'";
         $res = mysqli_query($link, $sql);
         while($row = mysqli_fetch_assoc($res)){
             $tmp = new book();
+            $tmp->id = $row['id'];
             $tmp->books_name = $row['books_name'];
             $tmp->books_image = $row['books_image'];
             $tmp->books_author_name = $row['books_author_name'];
