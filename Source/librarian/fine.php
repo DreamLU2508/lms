@@ -72,9 +72,3 @@
  <?php 
 	include 'inc/footer.php';
  ?>
-  <script>
-        $(document).ready(function () {
-            $('#dtBasicExample').DataTable();
-            $('.dataTables_length').addClass('bs-select');
-        });
-    </script>
