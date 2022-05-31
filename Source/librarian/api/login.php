@@ -14,7 +14,7 @@
         public $status;
     }
     
-if (isset($_POST["login"])) {
+if (isset($_POST["username"]) && isset($_POST["password"])) {
     $array = array();
     $count = 0;
     $res = mysqli_query($link, "select * from users where username='$_POST[username]' && password= '$_POST[password]' && status='yes' ");

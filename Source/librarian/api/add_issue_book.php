@@ -10,7 +10,9 @@
         $sql = "INSERT INTO issue_book VALUES ('".$user_id."','".$book_id."','".date("d/m/Y", $currentDate)."')";
         $sql2 = "INSERT INTO return_book VALUES ('".$user_id."','".$book_id."','','".$expirationDate."', 0)";
         if(mysqli_query($link, $sql) and mysqli_query($link, $sql2)){
-            echo "ok";
+            echo "success";
+        } else {
+            echo "error";
         }
     }
 
