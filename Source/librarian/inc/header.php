@@ -24,7 +24,7 @@
 				<div class="profile">
 					<div class="profile-pic">
                         <?php
-                            $res = mysqli_query($link, "select * from lib_registration where id='".$_SESSION['username']."'");
+                            $res = mysqli_query($link, "select * from lib_registration where id='".$_SESSION['id']."'");
                             while ($row = mysqli_fetch_array($res)){
                                 ?><img src="<?php echo $row["photo"]; ?> " height="" width="" alt="something wrong" class="rounded-circle"></a> <?php
                             }
@@ -34,7 +34,7 @@
 						<span>Chào Mừng!</span>
 						<h2>
               <?php 
-                $res = mysqli_query($link, "select * from lib_registration where id='".$_SESSION['username']."'");
+                $res = mysqli_query($link, "select * from lib_registration where id='".$_SESSION['id']."'");
                 while ($row = mysqli_fetch_array($res)){
                   $name  =  $row["name"];
                   echo $name;
@@ -55,8 +55,12 @@
     					  <li class="menu <?php if($page=='profile'){ echo 'active';} ?>">
       						<a href="profile.php"><i class="fas fa-id-card"></i>Hồ sơ</a>
     					</li>
-	                    <li class="menu <?php if($page=='sinfo'){ echo 'active';} ?>">
-      						<a href="all-users-info.php"><i class="fas fa-desktop"></i>Tất cả thông tin người dùng</a>
+						<li class="menu menu-toggle1">
+      						<a href="#"><i class="fas fa-desktop"></i>Người dùng<span class="fa fa-chevron-down"></span></a>
+      						<ul class="menus1">
+							  	<li><a href="all-users-info.php"></i>Tất cả thông tin người dùng</a></li>
+      							<li><a href="status.php">Trạng thái</a></li>
+      						</ul>
     					</li>
     					<li class="menu menu-toggle2">
       						<a href="#"><i class="fas fa-location-arrow"></i>Quản lý sách<span class="fa fa-chevron-down"></span></a>
@@ -78,7 +82,7 @@
       						<a href="requested-books.php"><i class="fas fa-book"></i>Xem sách được yêu cầu</a>
     					</li>
     					<li class="menu menu-toggle4">
-      						<a href="#"><i class="far fa-share-square"></i>Gửi tin nhắn cho người dùng</a>
+      						<a href="send-to-user.php"><i class="far fa-share-square"></i>Gửi tin nhắn cho người dùng</a>
     					</li>
     				</ul>
 				</div>
@@ -95,7 +99,7 @@
                             </li>
 							<li class="dropdown">
                                 <?php
-                                     $res = mysqli_query($link, "select * from lib_registration where id='".$_SESSION['username']."'");
+                                     $res = mysqli_query($link, "select * from lib_registration where id='".$_SESSION['id']."'");
                                      while ($row = mysqli_fetch_array($res)){
                                          ?><a href="" class="dropdown-toggle" data-toggle="dropdown"><img src="<?php echo $row["photo"]; ?>" alt=""><span><?php echo $row["username"]; ?></span></a> <?php
                                      }
@@ -103,7 +107,7 @@
 								<ul class="dropdown-menu">
 									<li class="user-header text-center">
 										<?php
-                                        $res = mysqli_query($link, "select * from lib_registration where id='".$_SESSION['username']."'");
+                                        $res = mysqli_query($link, "select * from lib_registration where id='".$_SESSION['id']."'");
 										$row = mysqli_fetch_assoc($res);
                                             ?><img src="<?php echo $row["photo"]; ?>" alt=""> <?php
 										

@@ -1,9 +1,9 @@
 <?php 
      session_start();
-    if (!isset($_SESSION["username"])) {
+    if (!isset($_SESSION["id"])) {
         ?>
             <script type="text/javascript">
-                window.location="login.php";
+                window.location="index.php";
             </script>
         <?php
     }
@@ -39,7 +39,6 @@
                                                 <th>Email</th>
                                                 <th>Tên sách</th>
                                                 <th>Giá</th>
-                                                <th>Hành động</th>
                                             </tr>
                                        </thead>
                                        <tbody>
@@ -53,9 +52,6 @@
                                                         echo "<td>"; echo $row["email"]; echo "</td>";
                                                         echo "<td>"; echo $row["books_name"]; echo "</td>";
                                                         echo "<td>"; echo $row["cost"]; echo "</td>";
-													    echo "<td>";
-													    ?><a href="#" style="color: red"><i class="fas fa-trash"></i></a><?php
-													    echo "</td>";
                                                         echo "</tr>";
                                                     }
                                                 }

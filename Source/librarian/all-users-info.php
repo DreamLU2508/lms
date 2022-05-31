@@ -1,9 +1,9 @@
 <?php 		 
     session_start();
-    if (!isset($_SESSION["username"])) {
+    if (!isset($_SESSION["id"])) {
         ?>
             <script type="text/javascript">
-                window.location="login.php";
+                window.location="index.php";
             </script>
         <?php
     }
@@ -25,7 +25,7 @@
 					<div class="col-md-6">
 						<div class="right text-right">
 							<a href="dashboard.php"><i class="fas fa-home"></i>Trang chủ</a>
-							<span class="disabled">Tất cả sinh viên</span>
+							<span class="disabled">Tất cả người dùng</span>
 						</div>
 					</div>
 				</div>
@@ -76,9 +76,4 @@
 	<?php 
 		include 'inc/footer.php';
 	 ?>
-    <script>
-        $(document).ready(function () {
-            $('#dtBasicExample').DataTable();
-            $('.dataTables_length').addClass('bs-select');
-        });
-    </script>		
+    	

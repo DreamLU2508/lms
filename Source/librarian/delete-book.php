@@ -1,9 +1,9 @@
 <?php
     session_start();
-    if (!isset($_SESSION["username"])) {
+    if (!isset($_SESSION["id"])) {
         ?>
         <script type="text/javascript">
-            window.location="login.php";
+            window.location="index.php";
         </script>
         <?php
     }
@@ -15,6 +15,7 @@
 
         ?>
         <script type="text/javascript">
+            alert("Xóa thành công");
             window.location="display-books.php";
         </script>
         <?php

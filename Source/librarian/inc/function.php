@@ -8,33 +8,28 @@
 		$address = $_POST["address"];
 		$utype = $_POST["utype"];
 		if ($name == "" | $username =="" | $password =="" | $email == "" | $phone == "" | $address == "") {
-			$error_m= "Error! <span>Feild mustn't be empty</span>";
-
+			$error_m= "Lỗi! <span>các trường không được để trống</span>";
 		}
 		$photo = "upload/avatar.jpg";
 		
-         
-//          elseif(preg_match('/[^a-z0-9_-]+/i', $username)){
-//             $error_msg = "<div class='alert alert-danger'><strong>Error ! </strong>username Must be contain numerical alphabet, dashes, number and Underscore</div>";
-//            }
-		
-		$sql_u= mysqli_query($link,"select * from users where username= '$username'");
+		if(!isset($error_m)){
+			$sql_u= mysqli_query($link,"select * from users where username= '$username'");
 		$sql_e= mysqli_query($link,"select * from users where email= '$email'");
 		$sql_p= mysqli_query($link,"select * from users where phone= '$phone'");
         
 		if(mysqli_num_rows($sql_u) > 0){
-			$error_uname = "Username already exist";
+			$error_uname = "Tài khoản đã tồn tại";
 		}
         elseif(mysqli_num_rows($sql_e) > 0){
-            $error_email = "Email already exist";
+            $error_email = "Email đã tồn tại";
         }
         elseif(mysqli_num_rows($sql_p) > 0){
-            $error_phone = "Phone already registered";
+            $error_phone = "Số điện thoại đã tồn tại";
         }
 		elseif(strlen($username) < 6){
             $error_ua ="Username too short";
         }elseif (filter_var($email, FILTER_VALIDATE_EMAIL)== false) {
-				$e_msg = "<div class='alert alert-danger'><strong>Error ! </strong>Email Address Not Valid</div>";
+				$e_msg = "<div class='alert alert-danger'><strong>Lỗi ! </strong>Email không đúng định dạng</div>";
 		} 
 		else{
 		    // $vkey = md5(time().$username);
@@ -49,6 +44,7 @@
             }else{
                 echo $mysqli->error;
             }
+		}
 		}
 	}
 ?>

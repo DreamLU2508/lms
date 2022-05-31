@@ -1,9 +1,9 @@
 <?php 
      session_start();
-    if (!isset($_SESSION["username"])) {
+    if (!isset($_SESSION["id"])) {
         ?>
             <script type="text/javascript">
-                window.location="login.php";
+                window.location="index.php";
             </script>
         <?php
     }
@@ -41,7 +41,7 @@
                                                         $res= mysqli_query($link, "SELECT users.id, name, username, password, email, phone, address, utype, photo, status, issue_book.book_id, issue_book.booksissuedate, return_book.returndate, return_book.expirationdate, return_book.cost, book.books_name, book.books_image, book.books_author_name, book.books_publication_name, book.books_purchase_date, book.books_price, book.books_quantity, book.books_availability, book.librarian_id, book.books_file FROM issue_book, return_book, book, users WHERE issue_book.user_id = return_book.user_id AND issue_book.book_id = return_book.book_id AND issue_book.book_id = book.id AND issue_book.user_id = users.id ");
                                                         while($row=mysqli_fetch_array($res)){
                                                             echo "<option>";
-                                                            echo $row["id"].' - '.$row['name'];
+                                                            echo $row["id"].' - '.$row['name'].' - '.$row['books_name'];
                                                             echo "</option>";
                                                         }
                                                     ?>

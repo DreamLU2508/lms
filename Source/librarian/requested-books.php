@@ -1,9 +1,9 @@
 <?php 
      session_start();
-    if (!isset($_SESSION["username"])) {
+    if (!isset($_SESSION["id"])) {
         ?>
             <script type="text/javascript">
-                window.location="login.php";
+                window.location="index.php";
             </script>
         <?php
     }
@@ -73,9 +73,3 @@
  <?php 
 	include 'inc/footer.php';
  ?>
-   <script>
-        $(document).ready(function () {
-            $('#dtBasicExample').DataTable();
-            $('.dataTables_length').addClass('bs-select');
-        });
-    </script>

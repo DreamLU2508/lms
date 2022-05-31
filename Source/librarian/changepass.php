@@ -1,9 +1,9 @@
 <?php 
      session_start();
-     if (!isset($_SESSION["username"])) {
+     if (!isset($_SESSION["id"])) {
         ?>
             <script type="text/javascript">
-                window.location="login.php";
+                window.location="index.php";
             </script>
         <?php
     }
@@ -17,13 +17,13 @@
 				<div class="row">
 					<div class="col-md-6">
 						<div class="left">
-							<p><span>dashboard</span>Control panel</p>
+							<p><span>Bảng điều khiển</span></p>
 						</div>
 					</div>
 					<div class="col-md-6">
 						<div class="right text-right">
-							<a href="dashboard.php"><i class="fas fa-home"></i>home</a>
-							<span class="disabled">change password</span>
+							<a href="dashboard.php"><i class="fas fa-home"></i>Trang chủ</a>
+							<span class="disabled">Đổi mật khẩu</span>
 						</div>
 					</div>
 				</div>

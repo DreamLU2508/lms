@@ -1,9 +1,9 @@
 <?php
     session_start();
-    if (!isset($_SESSION["username"])) {
+    if (!isset($_SESSION["id"])) {
     ?>
         <script type="text/javascript">
-            window.location="login.php";
+            window.location="index.php";
         </script>
     <?php
     }
@@ -14,20 +14,6 @@
  ?>
 
  <script type="text/javascript">
+     alert("Kích hoạt thành công");
  	window.location="status.php";
  </script>
-
-
-<?php 
-     $res = mysqli_query($link, "select * from users where id=$id");
-    while($row = mysqli_fetch_array($res)){
-        $email      = $row['email']; 
-    }
-    $to = "$email";
-    $subject = "Account Conformation";
-    $message = "Your account is approved. Now you can login your account";
-    $headers = "From: parttimemail18@gmail.com";
-    mail($to,$subject,$message,$headers);
-?>
-
- 

@@ -1,9 +1,9 @@
 <?php 
      session_start();
-    if (!isset($_SESSION["username"])) {
+    if (!isset($_SESSION["id"])) {
         ?>
             <script type="text/javascript">
-                window.location="login.php";
+                window.location="index.php";
             </script>
         <?php
     }
@@ -126,7 +126,7 @@
 								<i class="fab fa-staylinked"></i>
 							</div>
 							<div class="text">
-								<h4 class="mt-20"><a href="status.php">Trạng thái</a></h4>
+								<h4 class="mt-20"><a href="status.php">Trạng thái người dùng</a></h4>
 							</div>
 						</div>
 					</div>

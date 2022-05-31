@@ -1,9 +1,9 @@
 	<?php 
 		 session_start();
-		if (!isset($_SESSION["username"])) {
+		if (!isset($_SESSION["id"])) {
             ?>
                 <script type="text/javascript">
-                    window.location="login.php";
+                    window.location="index.php";
                 </script>
             <?php
             
@@ -104,9 +104,15 @@
                 move_uploaded_file($_FILES["f1"]["tmp_name"],$imagepath);
                 move_uploaded_file($_FILES["file"]["tmp_name"],$filepath);
 
-                mysqli_query($link, "insert into book values('','$_POST[booksname]','$imagepath','$_POST[bauthorname]','$_POST[bpubname]','$_POST[bpurcdate]','$_POST[bprice]','$_POST[bquantity]','$_POST[bavailability]','$_SESSION[username]','$filepath')");
+                mysqli_query($link, "insert into book values('','$_POST[booksname]','$imagepath','$_POST[bauthorname]','$_POST[bpubname]','$_POST[bpurcdate]','$_POST[bprice]','$_POST[bquantity]','$_POST[bavailability]','$_SESSION[id]','$filepath')");
                 
-            }
+                ?>
+                 <script type="text/javascript">
+                    alert("Thêm thành công");
+ 	                window.location="display-books.php";
+                </script>
+                <?php
+            } 
         ?>
 			
 	<?php 
