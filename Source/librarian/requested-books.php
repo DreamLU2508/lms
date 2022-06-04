@@ -10,7 +10,7 @@
     $page = 'rbook';
     include 'inc/header.php';
     include 'inc/connection.php';
-    mysqli_query($link,"update request_books set read1='yes'");
+    //mysqli_query($link,"update request_books set read1='yes'");
  ?>
 	<!--dashboard area-->
 	<div class="dashboard-content">

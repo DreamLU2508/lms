@@ -43,7 +43,8 @@
                                     <th>Giá</th>
                                     <th>Số lượng</th>
                                     <th>Sách có sẵn</th>
-                                    <th>Xóa sách</th>
+                                    <th>Xóa</th>
+                                    <th>Sửa</th>
                                 </tr>
                            </thead>
                             
@@ -74,8 +75,11 @@
                                     echo "<td>";
                                     echo $row["books_availability"];
                                     echo "</td>";
-                                     echo "<td>";
+                                    echo "<td>";
                                     ?><a href="delete-book.php?id=<?php echo $row["id"]; ?> "><i class="fas fa-trash"></i></a><?php
+                                    echo "</td>";
+                                    echo "<td>";
+                                    ?><a href="edit-book.php?id=<?php echo $row["id"]; ?> "><i class="fas fa-edit"></i></a><?php
                                     echo "</td>";
                                     echo "</tr>";
                                 }
@@ -91,3 +95,9 @@
 	<?php 
 		include 'inc/footer.php';
 	 ?>
+     <script>
+        $(document).ready(function () {
+            $('#dtBasicExample').DataTable();
+            $('.dataTables_length').addClass('bs-select');
+        });
+  </script>

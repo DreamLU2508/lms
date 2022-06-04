@@ -101,8 +101,6 @@
                 $newfilename2 = round(microtime(true)) . '.' . end($temp2);
                 $imagepath="books-image/".$newfilename;
                 $filepath="books-file/".$newfilename2;
-                var_dump($newfilename);
-                var_dump($newfilename2);
                 move_uploaded_file($_FILES["f1"]["tmp_name"],$imagepath);
                 move_uploaded_file($_FILES["file"]["tmp_name"],$filepath);
 
