@@ -123,7 +123,11 @@ if (isset($_GET["id"])) {
         move_uploaded_file($_FILES["file"]["tmp_name"],$filepath);
 
         mysqli_query($link, "UPDATE book SET  books_name = '$_POST[booksname]',books_image = '$imagepath',books_author_name = '$_POST[bauthorname]',books_publication_name = '$_POST[bpubname]',books_purchase_date = '$_POST[bpurcdate]',books_price = '$_POST[bprice]',books_quantity = '$_POST[bquantity]',books_availability = '$_POST[bavailability]', librarian_id = '$_SESSION[id]',books_file = '$filepath' WHERE id = $_GET[id]");
-        echo "ok";        
+        ?><script type="text/javascript">
+                    alert("Sửa thành công");
+ 	                window.location="display-books.php";
+                </script>
+                <?php        
     }
 ?>
 

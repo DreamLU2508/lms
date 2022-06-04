@@ -1,4 +1,4 @@
--- phpMyAdmin SQL Dump
+﻿-- phpMyAdmin SQL Dump
 -- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
@@ -46,12 +46,12 @@ CREATE TABLE `book` (
 --
 
 INSERT INTO `book` (`id`, `books_name`, `books_image`, `books_author_name`, `books_publication_name`, `books_purchase_date`, `books_price`, `books_quantity`, `books_availability`, `librarian_id`, `books_file`) VALUES
-(1, 'Theoretical Numerical Analysis', 'books-image/5ebaa3080bb0327177a67d697223498a41GxQsLNarL._SX328_BO1,204,203,200_.jpg', 'Kendall Atkinson', 'Dover Publications', '15/03/19', 420, 10, 8, 1, 'books-file/nalrs.pdf'),
-(2, 'Health Informatics', 'books-image/9749fdc83fefbcc9cf3a55b16c7a353041SZngIJfuL._SX389_BO1,204,203,200_.jpg', 'Nancy Staggers', 'Elsevier Mosby', '12/03/19', 480, 15, 15, 1, 'books-file/Contents and Front Matter.pdf'),
-(3, 'Digital Image Processing', 'books-image/f5546d1614746fed61c4162163d81a59196018.jpg', 'Rafael C. Gonzalez', 'Prentice Hall', '20/03/19', 500, 20, 18, 1, 'books-file/IT6005-SCAD-MSM-by www.LearnEngineering.in.pdf'),
-(6, 'Artificial Intelligence', 'books-image/17385102edb4831bab1b8b0577389d5e0133001989.jpg', ' Peter Norvig', 'Dover Publications', '25/03/19', 420, 5, 3, 1, 'books-file/17385102edb4831bab1b8b0577389d5eArtificial Intelligence.pdf'),
-(7, 'Parallel and Distributed Processing', 'books-image/1554233254.jpg', 'Jose Rolim', 'Elsevier Science', '02/0419', 350, 10, 9, 1, 'books-file/1554233331.pdf'),
-(8, 'The Guest Book: A Novel', 'books-image/1568430614.jpg', 'test', 'test', '10/5/19', 200, 10, 10, 1, 'books-file/1568430614.pdf');
+(1, 'Phân tích số lý thuyết', 'books-image/5ebaa3080bb0327177a67d697223498a41GxQsLNarL._SX328_BO1,204,203,200_.jpg', 'Kendall Atkinson', 'Nhà xuất bản Đại Học Quốc Gia Hà Nội', '15/03/19', 420, 10, 8, 1, 'books-file/nalrs.pdf'),
+(2, 'Thông tin sức khỏe', 'books-image/9749fdc83fefbcc9cf3a55b16c7a353041SZngIJfuL._SX389_BO1,204,203,200_.jpg', 'Nancy Staggers', 'Nhà xuất bản Giáo Dục', '12/03/19', 480, 15, 15, 1, 'books-file/Contents and Front Matter.pdf'),
+(3, 'Xử lý hình ảnh kỹ thuật số', 'books-image/f5546d1614746fed61c4162163d81a59196018.jpg', 'Rafael C. Gonzalez', 'Nhà xuất bản Trí Thức', '20/03/19', 500, 20, 18, 1, 'books-file/IT6005-SCAD-MSM-by www.LearnEngineering.in.pdf'),
+(6, 'Trí tuệ nhân tạo', 'books-image/17385102edb4831bab1b8b0577389d5e0133001989.jpg', ' Peter Norvig', 'Nhà xuất bản Trí Thức', '25/03/19', 420, 5, 3, 1, 'books-file/17385102edb4831bab1b8b0577389d5eArtificial Intelligence.pdf'),
+(7, 'Xử lý song song và phân tán', 'books-image/1554233254.jpg', 'Jose Rolim', 'Nhà xuất bản Đại Học Quốc Gia Hà Nội', '02/0419', 350, 10, 9, 1, 'books-file/1554233331.pdf'),
+(8, 'Tiểu thuyết', 'books-image/1568430614.jpg', 'test', 'Nhà xuất bản Kim Đồng', '10/5/19', 200, 10, 10, 1, 'books-file/1568430614.pdf');
 
 -- --------------------------------------------------------
 
