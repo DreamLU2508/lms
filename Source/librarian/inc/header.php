@@ -123,6 +123,9 @@
 											<li>
 												<a href="logout.php">Thoát</a>
 											</li>
+											<li">
+												<a href="changepass.php">Đổi mật khẩu</a>
+											</li>
 										</ul>
 									</li>														
 								</ul>

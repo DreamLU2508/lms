@@ -34,7 +34,7 @@
 	<div class="login registration">
 		<div class="wrapper">
 			<div class="reg-header text-center">
-				<h2 style="color: #000">Quản lý thư viện</h2>
+				<h2>Quản lý thư viện</h2>
 				<div class="gap-30"></div>
                 <div class="gap-30"></div>
 			</div>

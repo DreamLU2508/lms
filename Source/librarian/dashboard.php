@@ -42,7 +42,7 @@
                                          echo $count;
                                     ?>
                                     </span></h3>
-								<h4><a href="#">Thành viên</a></h4>
+								<h4><a href="all-users-info.php">Thành viên</a></h4>
 							</div>
 						</div>
 					</div>
@@ -147,3 +147,5 @@
 	<?php 
 		include 'inc/footer.php';
 	 ?>
+
+	 
