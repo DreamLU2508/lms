@@ -43,7 +43,7 @@ if (isset($_GET["id"])) {
                 </div>
             </div>
             <div class="bstore">
-                <form action="" method="post" enctype="multipart/form-data">
+                <form action="process-edit.php" method="post" enctype="multipart/form-data">
                     <table class="table table-bordered">
                         <tr>
                             <td>
@@ -100,7 +100,7 @@ if (isset($_GET["id"])) {
                         </tr>
                     </table>
                     <div class="submit mt-20">
-                        <input type="submit" name="submit" class="btn btn-info submit" value="Thêm sách">
+                        <input type="submit" name="get" class="btn btn-info submit" value="Sửa sách">
                     </div>
                 </form>
             </div>
@@ -109,26 +109,5 @@ if (isset($_GET["id"])) {
 </div>
 
 <?php
-    include 'inc/footer.php';
-    if(isset($_POST['submit'])){
-        $image_name=$_FILES['f1']['name'];
-        $file_name=$_FILES['file']['name'];
-        $temp = explode(".", $image_name);
-        $temp2 = explode(".", $file_name);
-        $newfilename = round(microtime(true)) . '.' . end($temp);
-        $newfilename2 = round(microtime(true)) . '.' . end($temp2);
-        $imagepath="books-image/".$newfilename;
-        $filepath="books-file/".$newfilename2;
-        move_uploaded_file($_FILES["f1"]["tmp_name"],$imagepath);
-        move_uploaded_file($_FILES["file"]["tmp_name"],$filepath);
-
-        mysqli_query($link, "UPDATE book SET  books_name = '$_POST[booksname]',books_image = '$imagepath',books_author_name = '$_POST[bauthorname]',books_publication_name = '$_POST[bpubname]',books_purchase_date = '$_POST[bpurcdate]',books_price = '$_POST[bprice]',books_quantity = '$_POST[bquantity]',books_availability = '$_POST[bavailability]', librarian_id = '$_SESSION[id]',books_file = '$filepath' WHERE id = $_GET[id]");
-        ?><script type="text/javascript">
-                    alert("Sửa thành công");
- 	                window.location="display-books.php";
-                </script>
-                <?php        
-    }
-?>
-
+ include 'inc/footer.php';?>
 
