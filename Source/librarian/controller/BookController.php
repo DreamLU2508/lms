@@ -28,7 +28,7 @@
             if(strlen($bauthorname) > 60) {
                 return "Tên tác giả không dài quá 60 kí tự!";
             } else if(strlen($bauthorname) < 6) {
-                return "Tên sách không được ngắn hơn 6 kí tự!";
+                return "Tên tác giả không được ngắn hơn 6 kí tự!";
             }
             if(strlen($bpubname) > 200) {
                 return "Tên nhà xuất bản không được dài quá 200 kí tự";
