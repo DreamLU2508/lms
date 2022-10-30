@@ -2,6 +2,7 @@
 
 namespace Tests;
 use PHPUnit\Framework\TestCase;
+// include '../Source/librarian/controller/BookController.php';
 
 class LoginTest extends TestCase
 {
@@ -43,6 +44,9 @@ class LoginTest extends TestCase
         );
 
         $json_array = json_decode($result, true);
-        $this->assertTrue($json_array[0]["username"] != null);
+        // $this->assertTrue($json_array[0]["username"] != null);
+
+       
+        $this->assertTrue(validateDate("12/12/2022"));
     }
 }
