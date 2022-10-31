@@ -1,5 +1,5 @@
 <?php
-    // use UserController;
+        use AdminController;
 
         // // Contains the url to post data
         // // this is my local server url
@@ -58,20 +58,20 @@
 
         // $userController = new UserController();
 
-        $name = "";
-        $username = "duc123";
-        $password = "123456";
-        $email = "duc@gmail.com";
-        $phone = "01932670148";
-        $address = "Hà Nội";
-        $utype  = "student";
+        // $name = "";
+        // $username = "duc123";
+        // $password = "123456";
+        // $email = "duc@gmail.com";
+        // $phone = "01932670148";
+        // $address = "Hà Nội";
+        // $utype  = "student";
 
-        if ($name == "" || $username == "" || $password == "" || $email == "" || $phone == "" || $address == "") {
-            print_r("Các trường không được để trống!");
-        }
-        else {
-            print_r("out");
-        }
+        // if ($name == "" || $username == "" || $password == "" || $email == "" || $phone == "" || $address == "") {
+        //     print_r("Các trường không được để trống!");
+        // }
+        // else {
+        //     print_r("out");
+        // }
         // $photo = "upload/avatar.jpg";
 
 
@@ -99,4 +99,14 @@
         //         print_r() "Thêm thất bại";
         //     }
         // }
+
+        $adminController = new AdminController();
+
+        $name = "Hoàng Trung Đức";
+        $phone = "01932670148";
+        $address = "Hà Nội";
+        $urlImage = "./tests/images/1553455987.jpg";
+
+        $result = $adminController->updateAdmin($name, $phone, $address, $urlImage);
+        var_dump($result);
 ?>

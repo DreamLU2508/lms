@@ -3,7 +3,7 @@
 namespace Tests;
 
 use PHPUnit\Framework\TestCase;
-use UserController;
+use Source\librarian\controller\UserController;
 
 include '../lms/Source/librarian/controller/UserController.php';
 

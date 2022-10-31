@@ -1,12 +1,6 @@
 <?php
-   
-    include '../inc/connection.php';
-
-    function validateDate($date, $format = 'dd/MM/YY')
-    {
-        $d = DateTime::createFromFormat($format, $date);
-        return $d && $d->format($format) == $date;
-    }
+   namespace Source\librarian\controller;
+   use Source\librarian\controller\BaseController;
     
     class BookController {
         public $link;
@@ -20,6 +14,7 @@
         }
 
         public function addBook($booksname, $imagepath, $bauthorname, $bpubname, $bpurcdate, $bprice, $bquantity, $bavailability, $id, $filepath) {
+            $base = new BaseController();
             if(strlen($booksname) > 60) {
                 return "Tên sách không dài quá 60 kí tự!";
             } else if(strlen($booksname) < 6) {
@@ -35,7 +30,7 @@
             } else if(strlen($bpubname) < 6) {
                 return "Tên nhà xuất bản không được ngắn hơn 6 kí tự";
             }
-            if(!validateDate($bpurcdate)) {
+            if(!$base->validateDate($bpurcdate)) {
                 return "Ngày mua không đúng định dạng";
             }
             if(is_numeric($bprice)) {
@@ -54,6 +49,7 @@
             }
         }
 
+        // delete book
         
 
 

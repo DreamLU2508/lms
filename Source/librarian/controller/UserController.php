@@ -1,10 +1,6 @@
 <?php
-include '../inc/connection.php';
-function validateDate($date, $format = 'dd/MM/YY')
-{
-    $d = DateTime::createFromFormat($format, $date);
-    return $d && $d->format($format) == $date;
-}
+namespace Source\librarian\controller;
+
 class UserController
 {
     public $link;

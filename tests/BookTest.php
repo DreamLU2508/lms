@@ -3,7 +3,7 @@
 namespace Tests;
 
 use PHPUnit\Framework\TestCase;
-use BookController;
+use Source\librarian\controller\BookController;
 
 include '../lms/Source/librarian/controller/BookController.php';
 
