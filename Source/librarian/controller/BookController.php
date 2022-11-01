@@ -49,7 +49,43 @@
             }
         }
 
-        // delete book
+        // 
+        public function borrowBook($data)
+        { 
+            $user_id = $data['user_id'];
+            $book_id = $data['book_id'];
+
+            $url_path = 'http://localhost/lms/Source/librarian/api/add_issue_book.php';
+            $options = array(
+                'http' => array(
+                    'method' => 'POST',
+                    'header'  => 'Content-Type: application/x-www-form-urlencoded',
+                    'content' => http_build_query($data)
+                )
+            );
+            $stream = stream_context_create($options);
+
+            $res = mysqli_query($this->link, "select * from issue_book where id = $user_id");
+            $countUser = mysqli_num_rows($res);
+
+            if($countUser >= 10) {
+                return "Số sách mượn đã đạt giới hạn";
+            }
+
+            $res = mysqli_query($this->link, "select * from issue_book where id = $book_id");
+            $countBook = mysqli_num_rows($res);
+            if($countBook > 0){
+                return "Sách đã được mượn trong hệ thống";
+            }
+
+            $result = file_get_contents(
+                $url_path,
+                false,
+                $stream
+            );
+
+            return $result;
+        }
         
 
 
