@@ -42,89 +42,89 @@ class BookTest extends TestCase
         }
 
     /** @test */
-    public function nameBookEmpty()
-    {
-        $bookController = new BookController();
+    // public function nameBookEmpty()
+    // {
+    //     $bookController = new BookController();
 
-        $booksname = "";
-        $imagepath = "books-image/5ebaa3080bb0327177a67d697223498a41GxQsLNarL._SX328_BO1,204,203,200_.jpg";
-        $bauthorname = "Kendall Atkinson";
-        $bpubname = "Nhà xuất bản Đại Học Quốc Gia Hà Nội";
-        $bpurcdate = "15/03/19";
-        $bprice = 10;
-        $bquantity = 10;
-        $bavailability = 8;
-        $id = "1";
-        $filepath = "books-file/nalrs.pdf";
+    //     $booksname = "";
+    //     $imagepath = "books-image/5ebaa3080bb0327177a67d697223498a41GxQsLNarL._SX328_BO1,204,203,200_.jpg";
+    //     $bauthorname = "Kendall Atkinson";
+    //     $bpubname = "Nhà xuất bản Đại Học Quốc Gia Hà Nội";
+    //     $bpurcdate = "15/03/19";
+    //     $bprice = 10;
+    //     $bquantity = 10;
+    //     $bavailability = 8;
+    //     $id = "1";
+    //     $filepath = "books-file/nalrs.pdf";
 
-        $result = $bookController->addBook($booksname, $imagepath, $bauthorname, $bpubname, $bpurcdate, $bprice, $bquantity, $bavailability, $id, $filepath);
-        $expect = "Tên sách không được ngắn hơn 6 kí tự!";
-        $this->assertTrue($result == $expect);
-    }
+    //     $result = $bookController->addBook($booksname, $imagepath, $bauthorname, $bpubname, $bpurcdate, $bprice, $bquantity, $bavailability, $id, $filepath);
+    //     $expect = "Tên sách không được ngắn hơn 6 kí tự!";
+    //     $this->assertTrue($result == $expect);
+    // }
 
-    /** @test */
-    public function nameBookTooLong()
-    {
-        $bookController = new BookController();
+    // /** @test */
+    // public function nameBookTooLong()
+    // {
+    //     $bookController = new BookController();
 
-        $booksname = "Phân tích số lý thuyết. Phân tích số lý thuyết. Phân tích số lý thuyết. Phân tích số lý thuyết. Phân tích số lý thuyết. Phân tích số lý thuyết. Phân tích số lý thuyết.Phân tích số lý thuyết. Phân tích số lý thuyết. Phân tích số lý thuyết. Phân tích số lý thuyết. Phân tích số lý thuyết. Phân tích số lý thuyết. Phân tích số lý thuyết. Phân tích số lý thuyết. Phân tích số lý thuyết. Phân tích số lý thuyết. Phân tích số lý thuyết";
-        $imagepath = "books-image/5ebaa3080bb0327177a67d697223498a41GxQsLNarL._SX328_BO1,204,203,200_.jpg";
-        $bauthorname = "Kendall Atkinson";
-        $bpubname = "Nhà xuất bản Đại Học Quốc Gia Hà Nội";
-        $bpurcdate = "15/03/19";
-        $bprice = 10;
-        $bquantity = 10;
-        $bavailability = 8;
-        $id = "1";
-        $filepath = "books-file/nalrs.pdf";
+    //     $booksname = "Phân tích số lý thuyết. Phân tích số lý thuyết. Phân tích số lý thuyết. Phân tích số lý thuyết. Phân tích số lý thuyết. Phân tích số lý thuyết. Phân tích số lý thuyết.Phân tích số lý thuyết. Phân tích số lý thuyết. Phân tích số lý thuyết. Phân tích số lý thuyết. Phân tích số lý thuyết. Phân tích số lý thuyết. Phân tích số lý thuyết. Phân tích số lý thuyết. Phân tích số lý thuyết. Phân tích số lý thuyết. Phân tích số lý thuyết";
+    //     $imagepath = "books-image/5ebaa3080bb0327177a67d697223498a41GxQsLNarL._SX328_BO1,204,203,200_.jpg";
+    //     $bauthorname = "Kendall Atkinson";
+    //     $bpubname = "Nhà xuất bản Đại Học Quốc Gia Hà Nội";
+    //     $bpurcdate = "15/03/19";
+    //     $bprice = 10;
+    //     $bquantity = 10;
+    //     $bavailability = 8;
+    //     $id = "1";
+    //     $filepath = "books-file/nalrs.pdf";
 
-        $result = $bookController->addBook($booksname, $imagepath, $bauthorname, $bpubname, $bpurcdate, $bprice, $bquantity, $bavailability, $id, $filepath);
-        $expect = "Tên sách không dài quá 60 kí tự!";
-        $this->assertTrue($result == $expect);
-    }
+    //     $result = $bookController->addBook($booksname, $imagepath, $bauthorname, $bpubname, $bpurcdate, $bprice, $bquantity, $bavailability, $id, $filepath);
+    //     $expect = "Tên sách không dài quá 60 kí tự!";
+    //     $this->assertTrue($result == $expect);
+    // }
 
 
-    /** @test */
-    public function authorNameEmpty()
-    {
-        $bookController = new BookController();
+    // /** @test */
+    // public function authorNameEmpty()
+    // {
+    //     $bookController = new BookController();
 
-        $booksname = "Phân tích số lý thuyết";
-        $imagepath = "books-image/5ebaa3080bb0327177a67d697223498a41GxQsLNarL._SX328_BO1,204,203,200_.jpg";
-        $bauthorname = "";
-        $bpubname = "Nhà xuất bản Đại Học Quốc Gia Hà Nội";
-        $bpurcdate = "15/03/19";
-        $bprice = 10;
-        $bquantity = 10;
-        $bavailability = 8;
-        $id = "1";
-        $filepath = "books-file/nalrs.pdf";
+    //     $booksname = "Phân tích số lý thuyết";
+    //     $imagepath = "books-image/5ebaa3080bb0327177a67d697223498a41GxQsLNarL._SX328_BO1,204,203,200_.jpg";
+    //     $bauthorname = "";
+    //     $bpubname = "Nhà xuất bản Đại Học Quốc Gia Hà Nội";
+    //     $bpurcdate = "15/03/19";
+    //     $bprice = 10;
+    //     $bquantity = 10;
+    //     $bavailability = 8;
+    //     $id = "1";
+    //     $filepath = "books-file/nalrs.pdf";
 
-        $result = $bookController->addBook($booksname, $imagepath, $bauthorname, $bpubname, $bpurcdate, $bprice, $bquantity, $bavailability, $id, $filepath);
-        $expect = "Tên tác giả không được ngắn hơn 6 kí tự!";
-        $this->assertTrue($result == $expect);
-    }
+    //     $result = $bookController->addBook($booksname, $imagepath, $bauthorname, $bpubname, $bpurcdate, $bprice, $bquantity, $bavailability, $id, $filepath);
+    //     $expect = "Tên tác giả không được ngắn hơn 6 kí tự!";
+    //     $this->assertTrue($result == $expect);
+    // }
 
-    /** @test */
-    public function bookPublicationNameEmpty()
-    {
-        $bookController = new BookController();
+    // /** @test */
+    // public function bookPublicationNameEmpty()
+    // {
+    //     $bookController = new BookController();
 
-        $booksname = "Phân tích số lý thuyết";
-        $imagepath = "books-image/5ebaa3080bb0327177a67d697223498a41GxQsLNarL._SX328_BO1,204,203,200_.jpg";
-        $bauthorname = "Kendall Atkinson";
-        $bpubname = "";
-        $bpurcdate = "15/03/19";
-        $bprice = 10;
-        $bquantity = 10;
-        $bavailability = 8;
-        $id = "1";
-        $filepath = "books-file/nalrs.pdf";
+    //     $booksname = "Phân tích số lý thuyết";
+    //     $imagepath = "books-image/5ebaa3080bb0327177a67d697223498a41GxQsLNarL._SX328_BO1,204,203,200_.jpg";
+    //     $bauthorname = "Kendall Atkinson";
+    //     $bpubname = "";
+    //     $bpurcdate = "15/03/19";
+    //     $bprice = 10;
+    //     $bquantity = 10;
+    //     $bavailability = 8;
+    //     $id = "1";
+    //     $filepath = "books-file/nalrs.pdf";
 
-        $result = $bookController->addBook($booksname, $imagepath, $bauthorname, $bpubname, $bpurcdate, $bprice, $bquantity, $bavailability, $id, $filepath);
-        $expect = "Tên nhà xuất bản không được ngắn hơn 6 kí tự";
-        $this->assertTrue($result == $expect);
-    }
+    //     $result = $bookController->addBook($booksname, $imagepath, $bauthorname, $bpubname, $bpurcdate, $bprice, $bquantity, $bavailability, $id, $filepath);
+    //     $expect = "Tên nhà xuất bản không được ngắn hơn 6 kí tự";
+    //     $this->assertTrue($result == $expect);
+    // }
 
 
 }

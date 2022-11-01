@@ -11,6 +11,9 @@
             if(! $link ){
                die('Could not connect: ' );
             }
+            // $res = mysqli_query($link, "select * from issue_book where user_id = 1");
+            // $countUser = mysqli_num_rows($res);
+            // var_dump($res);
         }
 
         public function addBook($booksname, $imagepath, $bauthorname, $bpubname, $bpurcdate, $bprice, $bquantity, $bavailability, $id, $filepath) {
@@ -52,6 +55,14 @@
         // 
         public function borrowBook($data)
         { 
+            $con= mysqli_connect("localhost","root","");
+            mysqli_select_db($con, "project_new");
+            if(! $con ){
+               die('Could not connect: ' );
+            }
+
+
+            
             $user_id = $data['user_id'];
             $book_id = $data['book_id'];
 
@@ -65,14 +76,14 @@
             );
             $stream = stream_context_create($options);
 
-            $res = mysqli_query($this->link, "select * from issue_book where id = $user_id");
+            $res = mysqli_query($con, "select * from issue_book where user_id = $user_id");
             $countUser = mysqli_num_rows($res);
 
             if($countUser >= 10) {
                 return "Số sách mượn đã đạt giới hạn";
             }
 
-            $res = mysqli_query($this->link, "select * from issue_book where id = $book_id");
+            $res = mysqli_query($con, "select * from issue_book where book_id = $book_id");
             $countBook = mysqli_num_rows($res);
             if($countBook > 0){
                 return "Sách đã được mượn trong hệ thống";
