@@ -30,12 +30,13 @@ class AdminUpdateTest extends TestCase
         $name = "";
         $phone = "01932670148";
         $address = "Hà Nội";
-        $urlImage = "C:\\xampp\\htdocs\\lms\\tests\\images\\1553455987.jpg";
+        $urlImage = "C:\\xampp\\htdocs\\lms\\tests\\images\\test.png";
 
         $result = $adminController->updateAdmin($name, $phone, $address, $urlImage);
         $expect = "Không được để trống các trường";
         $this->assertEquals($result, $expect);
     }
+
 
     
 
