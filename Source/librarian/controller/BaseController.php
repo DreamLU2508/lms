@@ -24,6 +24,7 @@
                     'result' => false,
                     'mes' => "Lỗi định dạng"
                 ];
+                return $mes;
             }
             
             // kiểm tra kích cỡ
@@ -32,6 +33,7 @@
                     'result' => false,
                     'mes' => "Kích thước ảnh không phù hợp"
                 ];
+                return $mes;
             }
 
             // kiểm tra độ phân giải
@@ -41,6 +43,7 @@
                     'result' => false,
                     'mes' => "Độ phân giải ảnh không phù hợp"
                 ];
+                return $mes;
             }
 
             return $mes;
