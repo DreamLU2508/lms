@@ -14,17 +14,17 @@ class AddUserTest extends TestCase
     {
         $userController = new UserController();
 
-        $name = "";
-        $username = "duc123";
-        $password = "123456";
-        $email = "duc@gmail.com";
-        $phone = "01932670148";
+        $name = "Hoàn Trung Đức";
+        $username = "duchoang2508";
+        $password = "12345678";
+        $email = "duc442@gmail.com";
+        $phone = "0193267014";
         $address = "Hà Nội";
         $utype  = "student";
 
         $result = $userController->addUser($name, $username, $password, $email, $phone, $address, $utype);
         $expect = "Các trường không được để trống!";
-        $this->assertTrue($result == $expect);
+        $this->assertEquals($result, $expect);
     }
 
     //  /** @test */

@@ -64,7 +64,7 @@
 
         function validatePhone($phone)
         {
-            if(preg_match("/^[0-9]+$/", $phone)) {
+            if(preg_match("/^[0-9]+$/", $phone) && strlen($phone) == 10) {
                return true; 
             }
             return false;

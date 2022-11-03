@@ -34,16 +34,30 @@ class UserController
             return "Tài Khoản người dùng quá ngắn";
         } elseif (strlen($username) > 50) {
             return "Tài Khoản người dùng quá dài";
-        } elseif (!$baseController->validateUsernname(($name))) {
+        } elseif (!$baseController->validateUsernname(($username))) {
             return "Tài Khoản người dùng không được có kí tự đặc biệt";
         }
 
+        if(strlen($password) < 8) {
+            return "Mật khẩu người dùng quá ngắn";
+        } elseif (strlen($password) > 50) {
+            return "Mật khẩu người dùng quá dài";
+        }
+
+        if (filter_var($email, FILTER_VALIDATE_EMAIL) == false) {
+            return "Email không đúng định dạng";
+        }
+
+        if(!$baseController->validatePhone(($phone)) ) {
+            return "Số điện thoại không đúng định dạng";
+        }
         
         $photo = "upload/avatar.jpg";
-
-        $sql_u = mysqli_query($this->link, "select * from users where username= '$username'");
-        $sql_e = mysqli_query($this->link, "select * from users where email= '$email'");
-        $sql_p = mysqli_query($this->link, "select * from users where phone= '$phone'");
+        // câu truy vấn
+        $con = mysqli_connect("localhost", "root", "", "project_new");
+        $sql_u = mysqli_query($con, "select * from users where username= '$username'");
+        $sql_e = mysqli_query($con, "select * from users where email= '$email'");
+        $sql_p = mysqli_query($con, "select * from users where phone= '$phone'");
 
         if (mysqli_num_rows($sql_u) > 0) {
             return "Tài khoản đã tồn tại";
@@ -51,14 +65,10 @@ class UserController
             return "Email đã tồn tại";
         } elseif (mysqli_num_rows($sql_p) > 0) {
             return "Số điện thoại đã tồn tại";
-        } elseif (strlen($username) < 6) {
-            return "Username quá ngắn";
-        } elseif (filter_var($email, FILTER_VALIDATE_EMAIL) == false) {
-            return "Email không đúng định dạng";
         } else {
             // $vkey = md5(time().$username);
             $sql = "INSERT INTO users values('','$name','$username','$password','$email','$phone','$address','$utype','$photo','yes')";
-            $insert = mysqli_query($this->link, $sql);
+            $insert = mysqli_query($con, $sql);
             if ($insert) {
                 return "Thêm thành công!";
             } else {
