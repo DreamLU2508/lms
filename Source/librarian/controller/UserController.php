@@ -49,6 +49,12 @@ class UserController
 
     public function login($username, $password)
     {
+        $con= mysqli_connect("localhost","root","");
+        mysqli_select_db($con, "project_new");
+        if(! $con ){
+           die('Could not connect: ' );
+        }
+
         if ($username == "" || $password == "") {
             return "Các trường không được để trống!";
         } else if(strlen($username) < 8) {
@@ -61,9 +67,7 @@ class UserController
             return "Mật khẩu không được dài hơn 16 kí tự!";
         } else {
             $count = 0;
-            var_dump("select * from users where `username`= '$username' and `password`= '$password' and `status`='yes'");
-            $res = mysqli_query($this->link, "select * from users where `username`= $username and `password`= $password and `status`='yes'");
-            var_dump($res);
+            $res = mysqli_query($con, "SELECT * from users where `username`= '$username' and `password`= '$password' and `status`='yes'");
             $count = mysqli_num_rows($res);
             if ($count != 0) {
                 return "Thành công!";
