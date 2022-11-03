@@ -45,5 +45,37 @@
 
             return $mes;
         }
+
+        function validateName($name)
+        {
+            if(preg_match("/^[a-z\s\ÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂưăạảấầẩẫậắằẳẵặẹẻẽềềểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ]+$/i", $name)) {
+               return true; 
+            }
+            return false;
+        }
+
+        function validateUsernname($username)
+        {
+            if(preg_match("/^[a-zA-Z0-9]+$/", $username)) {
+               return true; 
+            }
+            return false;
+        }
+
+        function validatePhone($phone)
+        {
+            if(preg_match("/^[0-9]+$/", $phone) && strlen($phone) == 10) {
+               return true; 
+            }
+            return false;
+        }
+
+        function validateAddress($address)
+        {
+            if(preg_match("/^[a-z0-9\s\-,.ÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂưăạảấầẩẫậắằẳẵặẹẻẽềềểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ]+$/i", $address)) {
+               return true; 
+            }
+            return false;
+        }
     }
 ?>
