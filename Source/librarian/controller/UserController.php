@@ -21,7 +21,22 @@ class UserController
             return "Các trường không được để trống!";
         }
 
-        
+        // kiểm tra Độ dài
+        if(strlen($name) < 8) {
+            return "Tên người dùng quá ngắn";
+        } elseif (strlen($name) > 50) {
+            return "Tên người dùng quá dài";
+        } elseif (!$baseController->validateName(($name))) {
+            return "Tên người dùng không được có kí tự đặc biệt";
+        }
+
+        if(strlen($username) < 8) {
+            return "Tài Khoản người dùng quá ngắn";
+        } elseif (strlen($username) > 50) {
+            return "Tài Khoản người dùng quá dài";
+        } elseif (!$baseController->validateUsernname(($name))) {
+            return "Tài Khoản người dùng không được có kí tự đặc biệt";
+        }
 
         
         $photo = "upload/avatar.jpg";
