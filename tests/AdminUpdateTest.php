@@ -40,19 +40,19 @@ class AdminUpdateTest extends TestCase
         $this->assertEquals($result, $expect);
     }
         /** @test */
-        public function chieudaitenngan()
-        {
-            $adminController = new AdminController();
+    public function chieudaitenngan()
+    {
+        $adminController = new AdminController();
     
-            $name = "thuy";
-            $phone = "0193267014";
-            $address = "hanoissssss";
-            $urlImage = "C:\\xampp\\htdocs\\lms\\tests\\images\\test.png";
+        $name = "thuy";
+        $phone = "0193267014";
+        $address = "hanoissssss";
+        $urlImage = "C:\\xampp\\htdocs\\lms\\tests\\images\\test.png";
     
-            $result = $adminController->updateAdmin($name, $phone, $address, $urlImage);
-            $expect = "Tên quá ngắn";
-            $this->assertEquals($result, $expect);
-        }
+        $result = $adminController->updateAdmin($name, $phone, $address, $urlImage);
+        $expect = "Tên quá ngắn";
+        $this->assertEquals($result, $expect);
+    }
 
     /** @test */
     public function tenchuakytudacbiet()
@@ -65,7 +65,7 @@ class AdminUpdateTest extends TestCase
         $urlImage = "C:\\xampp\\htdocs\\lms\\tests\\images\\test.png";
 
         $result = $adminController->updateAdmin($name, $phone, $address, $urlImage);
-        $expect = "Tên không thể có kí tự đạc biệt";
+        $expect = "Tên không thể có kí tự đặc biệt";
         $this->assertEquals($result, $expect);
     }
     
@@ -152,7 +152,7 @@ class AdminUpdateTest extends TestCase
  
          $name = "thuythuy";
          $phone = "0193267014";
-         $address = "ha noi nghin nam van hien van mieu quoc tu giam lang bac hoi an quang binh thanh hoa nghe an ninh binh han quoc nam dinh hung yen thai binh xin chao viet nam xin chao omg nhom 7 so mot ";
+         $address = "ha noi nghin nam van hien van mieu quoc tu giam lang bac hoi an quang binh thanh hoa nghe an ninh binh han quoc nam dinh hung yen thai binh xin chao viet nam xin chao omg nhom 7 so mot ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss";
          $urlImage = "C:\\xampp\\htdocs\\lms\\tests\\images\\test.png";
  
          $result = $adminController->updateAdmin($name, $phone, $address, $urlImage);
@@ -215,20 +215,6 @@ class AdminUpdateTest extends TestCase
 
         $result = $adminController->updateAdmin($name, $phone, $address, $urlImage);
         $expect = "Lỗi định dạng";
-        $this->assertEquals($result, $expect);
-    }
-    /** @test */
-    public function Imagechuan()
-    {
-        $adminController = new AdminController();
-
-        $name = "Hoàng Trung Đức";
-        $phone = "0193267014";
-        $address = "Hà Nội";
-        $urlImage = "C:\\xampp\\htdocs\\lms\\tests\\images\\test.png";
-
-        $result = $adminController->updateAdmin($name, $phone, $address, $urlImage);
-        $expect = "Ảnh chuẩn";
         $this->assertEquals($result, $expect);
     }
 }
