@@ -16,30 +16,30 @@ class BookTest extends TestCase
         $data = array('book_id' => '1', 'user_id' => '1');
 
         $result = $bookController->borrowBook($data);
-        
+
         $this->assertTrue($result == "success");
     }
 
-        /** @test */
-        public function addBookSuccess()
-        {
-            $bookController = new BookController();
-    
-            $booksname = "Phân tích số lý thuyết";
-            $imagepath = "books-image/5ebaa3080bb0327177a67d697223498a41GxQsLNarL._SX328_BO1,204,203,200_.jpg";
-            $bauthorname = "Kendall Atkinson";
-            $bpubname = "Nhà xuất bản Đại Học Quốc Gia Hà Nội";
-            $bpurcdate = "15/03/19";
-            $bprice = 10;
-            $bquantity = 10;
-            $bavailability = 8;
-            $id = "1";
-            $filepath = "books-file/nalrs.pdf";
-    
-            $result = $bookController->addBook($booksname, $imagepath, $bauthorname, $bpubname, $bpurcdate, $bprice, $bquantity, $bavailability, $id, $filepath);
-            $expect = "Thêm sách thành công";
-            $this->assertTrue($result == $expect);
-        }
+    /** @test */
+    public function addBookSuccess()
+    {
+        $bookController = new BookController();
+
+        $booksname = "Phân tích số lý thuyết";
+        $imagepath = "books-image/5ebaa3080bb0327177a67d697223498a41GxQsLNarL._SX328_BO1,204,203,200_.jpg";
+        $bauthorname = "Kendall Atkinson";
+        $bpubname = "Nhà xuất bản Đại Học Quốc Gia Hà Nội";
+        $bpurcdate = "15/03/19";
+        $bprice = 10;
+        $bquantity = 10;
+        $bavailability = 8;
+        $id = "1";
+        $filepath = "books-file/nalrs.pdf";
+
+        $result = $bookController->addBook($booksname, $imagepath, $bauthorname, $bpubname, $bpurcdate, $bprice, $bquantity, $bavailability, $id, $filepath);
+        $expect = "Thêm sách thành công";
+        $this->assertTrue($result == $expect);
+    }
 
     /** @test */
     public function nameBookEmpty()
@@ -126,5 +126,46 @@ class BookTest extends TestCase
         $this->assertTrue($result == $expect);
     }
 
+    /** @test */
+    public function purchaseDateInvalid()
+    {
+        $bookController = new BookController();
+
+        $booksname = "Phân tích số lý thuyết";
+        $imagepath = "books-image/5ebaa3080bb0327177a67d697223498a41GxQsLNarL._SX328_BO1,204,203,200_.jpg";
+        $bauthorname = "Kendall Atkinson";
+        $bpubname = "Nhà xuất bản Đại Học Quốc Gia Hà Nội";
+        $bpurcdate = "///";
+        $bprice = 10;
+        $bquantity = 10;
+        $bavailability = 8;
+        $id = "1";
+        $filepath = "books-file/nalrs.pdf";
+
+        $result = $bookController->addBook($booksname, $imagepath, $bauthorname, $bpubname, $bpurcdate, $bprice, $bquantity, $bavailability, $id, $filepath);
+        $expect = "Ngày mua không đúng định dạng";
+        $this->assertTrue($result == $expect);
+    }
+
+     /** @test */
+     public function priceInvalid()
+     {
+         $bookController = new BookController();
+ 
+         $booksname = "Phân tích số lý thuyết";
+         $imagepath = "books-image/5ebaa3080bb0327177a67d697223498a41GxQsLNarL._SX328_BO1,204,203,200_.jpg";
+         $bauthorname = "Kendall Atkinson";
+         $bpubname = "Nhà xuất bản Đại Học Quốc Gia Hà Nội";
+         $bpurcdate = "15/03/19";
+         $bprice = "Adb10";
+         $bquantity = 10;
+         $bavailability = 8;
+         $id = "1";
+         $filepath = "books-file/nalrs.pdf";
+ 
+         $result = $bookController->addBook($booksname, $imagepath, $bauthorname, $bpubname, $bpurcdate, $bprice, $bquantity, $bavailability, $id, $filepath);
+         $expect = "Giá sách không đúng định dạng";
+         $this->assertEquals($result, $expect);
+     }
 
 }
