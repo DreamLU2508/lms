@@ -1,6 +1,7 @@
 <?php
 namespace Source\librarian\controller;
 
+use Source\librarian\controller\BaseController;
 class UserController
 {
     public $link;
@@ -15,9 +16,14 @@ class UserController
 
     public function addUser($name, $username, $password, $email, $phone, $address, $utype)
     {
+        $baseController =  new BaseController();
         if ($name == "" or $username == "" or $password == "" or $email == "" or $phone == "" or $address == "") {
             return "Các trường không được để trống!";
         }
+
+        
+
+        
         $photo = "upload/avatar.jpg";
 
         $sql_u = mysqli_query($this->link, "select * from users where username= '$username'");
