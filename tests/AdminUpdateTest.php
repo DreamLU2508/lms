@@ -54,6 +54,21 @@ class AdminUpdateTest extends TestCase
         $this->assertEquals($result, $expect);
     }
 
+        /** @test */
+    public function chieudaitendai()
+    {
+        $adminController = new AdminController();
+    
+        $name = "Đừng Như Thói Quen Chiều Hôm Ấy - TOP 20 Ca Khúc Từng Làm Mưa Làm Gió Các Bảng Xếp Hạng Âm Nhạc";
+        $phone = "0193267014";
+        $address = "hanoissssss";
+        $urlImage = "C:\\xampp\\htdocs\\lms\\tests\\images\\test.png";
+    
+        $result = $adminController->updateAdmin($name, $phone, $address, $urlImage);
+        $expect = "Tên quá dài";
+        $this->assertEquals($result, $expect);
+    }
+
     /** @test */
     public function tenchuakytudacbiet()
     {
