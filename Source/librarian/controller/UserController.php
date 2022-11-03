@@ -1,4 +1,5 @@
 <?php
+
 namespace Source\librarian\controller;
 
 class UserController
@@ -45,6 +46,30 @@ class UserController
             }
         }
     }
+
+    public function login($username, $password)
+    {
+        if ($username == "" || $password == "") {
+            return "Các trường không được để trống!";
+        } else if(strlen($username) < 8) {
+            return "Username không được ngắn hơn 8 kí tự!";
+        } else if(strlen($username) > 200) {
+            return "Username không được dài hơn 200 kí tự";
+        } else if(strlen($password) < 8) {
+            return "Mật khẩu không được ngắn hơn 8 kí tự!";
+        } else if(strlen($password) > 16) {
+            return "Mật khẩu không được dài hơn 16 kí tự!";
+        } else {
+            $count = 0;
+            var_dump("select * from users where `username`= '$username' and `password`= '$password' and `status`='yes'");
+            $res = mysqli_query($this->link, "select * from users where `username`= $username and `password`= $password and `status`='yes'");
+            var_dump($res);
+            $count = mysqli_num_rows($res);
+            if ($count != 0) {
+                return "Thành công!";
+            } else {
+                return "Tài khoản không tồn tại!";
+            }
+        }
+    }
 }
-
-
