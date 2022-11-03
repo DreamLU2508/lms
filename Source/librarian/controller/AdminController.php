@@ -14,6 +14,7 @@
         }    
 
         public function updateAdmin($name, $phone, $address, $urlImage) {
+            $validate = new BaseController();
             if($name == "" || $phone == "" || $address == "") {
                 return "Không được để trống các trường";
             }
@@ -24,17 +25,17 @@
             } else if (strlen($name) > 50) {
                 return "Tên quá dài";
             }
-            if(!preg_match("/^[a-z0-9\s\ÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂưăạảấầẩẫậắằẳẵặẹẻẽềềểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ]+$/i", $name)) {
-                return "Tên không thể có kí tự đạc biệt";
+            if(!$validate->validateName($name)) {
+                return "Tên không thể có kí tự đặc biệt";
             }
 
             // kiểm tra trường Số điện thoại
-            if($phone[0] != '0' || !preg_match("/^[0-9]+$/", $phone) || strlen($phone) != 10) {
+            if(!$validate->validatePhone($phone)) {
                 return "Số điện thoại không hợp lệ";
             }
 
             // kiểm tra ảnh
-            $validate = new BaseController();
+            
             $mes = $validate->checkImage($urlImage);
             if(!$mes['result']) {
                 return $mes['mes'];
@@ -46,7 +47,7 @@
             } else if (strlen($address) > 256) {
                 return "Địa chỉ quá dài";
             }
-            if(preg_match("/^[a-z0-9\s\-,.ÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂưăạảấầẩẫậắằẳẵặẹẻẽềềểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ]+$/i", $address)) {
+            if(!$validate->validateAddress($address)) {
                 return "Địa chỉ không thể có kí tự đặc biệt";
             }
             return 'Cập nhật thành công';

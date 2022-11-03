@@ -24,6 +24,7 @@
                     'result' => false,
                     'mes' => "Lỗi định dạng"
                 ];
+                return $mes;
             }
             
             // kiểm tra kích cỡ
@@ -32,6 +33,7 @@
                     'result' => false,
                     'mes' => "Kích thước ảnh không phù hợp"
                 ];
+                return $mes;
             }
 
             // kiểm tra độ phân giải
@@ -41,6 +43,7 @@
                     'result' => false,
                     'mes' => "Độ phân giải ảnh không phù hợp"
                 ];
+                return $mes;
             }
 
             return $mes;
@@ -48,7 +51,8 @@
 
         function validateName($name)
         {
-            if(preg_match("/^[a-z\s\ÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂưăạảấầẩẫậắằẳẵặẹẻẽềềểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ]+$/i", $name)) {
+
+            if(preg_match("/^[a-z\sÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂưăạảấầẩẫậắằẳẵặẹẻẽềềểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ]+$/i", $name)) {
                return true; 
             }
             return false;
@@ -64,7 +68,8 @@
 
         function validatePhone($phone)
         {
-            if(preg_match("/^[0-9]+$/", $phone) && strlen($phone) == 10) {
+            if(preg_match("/^[0-9]+$/", $phone) && strlen($phone) == 10 && $phone[0] == '0') {
+
                return true; 
             }
             return false;
