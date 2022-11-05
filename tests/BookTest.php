@@ -113,7 +113,7 @@ class BookTest extends TestCase
         $booksname = "Phân tích số lý thuyết";
         $imagepath = "books-image/5ebaa3080bb0327177a67d697223498a41GxQsLNarL._SX328_BO1,204,203,200_.jpg";
         $bauthorname = "Kendall Atkinson";
-        $bpubname = "";
+        $bpubname = "Nhà xuất bản Đại Học Quốc Gia Hà Nội";
         $bpurcdate = "15/03/19";
         $bprice = 10;
         $bquantity = 10;
@@ -134,6 +134,7 @@ class BookTest extends TestCase
         $booksname = "Phân tích số lý thuyết";
         $imagepath = "books-image/5ebaa3080bb0327177a67d697223498a41GxQsLNarL._SX328_BO1,204,203,200_.jpg";
         $bauthorname = "Kendall Atkinson";
+        $bpubname = "";
         $bpurcdate = "///";
         $bprice = 10;
         $bquantity = 10;
